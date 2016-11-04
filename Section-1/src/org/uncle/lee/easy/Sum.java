@@ -3,6 +3,7 @@ package org.uncle.lee.easy;
 public class Sum {
 	public int sum(int[] datas) {
 		int sum = 0;
+		// traverse array and add every element
 		for (int i = 0; i < datas.length; i++) {
 			sum += datas[i];
 		}

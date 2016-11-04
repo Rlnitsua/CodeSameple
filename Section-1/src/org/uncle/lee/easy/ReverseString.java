@@ -5,9 +5,11 @@ public class ReverseString {
 		char[] chars = s.toCharArray();
 		int charsLength = chars.length;
 
+		// new a char array
 		char[] newChars = new char[charsLength];
 
 		for (int i = 0; i < charsLength; i++) {
+			// copy every char form end to front
 			newChars[i] = chars[charsLength - 1 - i];
 		}
 
