@@ -1,5 +1,7 @@
 package org.uncle.lee.easy;
 
+import java.util.Arrays;
+
 public class BubbleSort {
 	public int[] sort(int[] datas) {
 		int length = datas.length;
@@ -22,12 +24,6 @@ public class BubbleSort {
 	public static void main(String[] args) {
 		int[] datas = { 3, 2, 8, 1, 9, 5, 4, 7, 6 };
 		int[] sortedDatas = new BubbleSort().sort(datas);
-		showDatas(sortedDatas);
-	}
-
-	private static void showDatas(int[] datas) {
-		for (Integer item : datas) {
-			System.out.print(item + " ");
-		}
+		System.out.println("sorted datas : " + Arrays.toString(sortedDatas));
 	}
 }
