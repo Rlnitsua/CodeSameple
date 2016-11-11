@@ -60,9 +60,40 @@ public class MajorityElement {
 		return result;
 	}
 	
+	public int majorityElement_voting(int[] nums){
+		int elem = 0;
+		int count = 0;
+		
+		// traverse all possible person
+		for (int i = 0; i < nums.length; i++){
+			// no one is holding votes, give votes to next one
+			if (count == 0) {
+				// write down this person
+				elem = nums[i];
+				// give one vote to him
+				count++;
+			} 
+			// there's someone holding votes
+			else {
+				// someone picks elem
+				if (elem == nums[i]) {
+					// add one vote to elem again
+					count++;
+				}
+				// someone denys elem
+				else {
+					// delete one vote to elem
+					count--;
+				}
+			}
+		}
+		return elem;
+	}
+	
 	public static void main(String[] args) {
-		int[] nums = {1, 2, 2, 2, 3, 4, 2};
+		int[] nums = {3, 3, 4};
 //		System.out.println("Majority element : " + new MajorityElement().majorityElement_violence(nums));
-		System.out.println("Majority element : " + new MajorityElement().majorityElement(nums));
+//		System.out.println("Majority element : " + new MajorityElement().majorityElement(nums));
+		System.out.println("Majority element : " + new MajorityElement().majorityElement_voting(nums));
 	}
 }
