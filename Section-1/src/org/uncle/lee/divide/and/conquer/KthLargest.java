@@ -26,7 +26,7 @@ public class KthLargest {
 	}
 	
 	public static void main(String[] args) {
-		int[] a = {3, 2, 1, 5, 6, 4};
+//		int[] a = {3, 2, 1, 5, 6, 4};
 		int[] b = {6, 1, 2, 3, 4, 5};
 		System.out.println(new KthLargest().findKthLargest(b, 2));
 	}
