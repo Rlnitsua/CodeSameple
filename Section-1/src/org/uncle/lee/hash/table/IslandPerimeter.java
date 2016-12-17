@@ -37,13 +37,14 @@ public class IslandPerimeter {
 	}
 	
 	public static void main(String[] args) {
-		int[][] grid = {{1, 0}};
+//		int[][] grid = {{1, 0}};
 		/*int[][] grid = {
 				{0, 1, 0, 0},
 				{1, 1, 1, 0},
 				{0, 1, 0, 0},
 				{1, 1, 0, 0}
 		};*/
+		int[][] grid = {{0,1,0,0},{1,1,1,0},{0,1,0,0},{1,1,0,0}};
 		System.out.println("Island perimeter : " + new IslandPerimeter().islandPerimeter(grid));
 
 		// max column is test[i].length
