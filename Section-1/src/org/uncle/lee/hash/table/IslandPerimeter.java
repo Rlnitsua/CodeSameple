@@ -3,11 +3,10 @@ package org.uncle.lee.hash.table;
 public class IslandPerimeter {
 	public int islandPerimeter(int[][] grid) {
 		int islandPerimeter = 0;
-		int maxRow = grid.length;
-		int maxColumn = grid[0].length;
 		
-		for(int rowIndex = 0; rowIndex < maxRow; rowIndex++){
-			for(int columnIndex = 0; columnIndex < maxColumn; columnIndex++){
+		// max column is grid[i].length
+		for(int rowIndex = 0; rowIndex < grid.length; rowIndex++){
+			for(int columnIndex = 0; columnIndex < grid[rowIndex].length; columnIndex++){
 				if(grid[rowIndex][columnIndex] == 1){
 					islandPerimeter += cellPerimeter(grid, rowIndex, columnIndex);
 				}
@@ -31,7 +30,7 @@ public class IslandPerimeter {
 			cellPerimeter++;
 		}
 		// right
-		if (columnIndex == (grid[0].length - 1) || grid[rowIndex][columnIndex + 1] == 0){
+		if (columnIndex == (grid[rowIndex].length - 1) || grid[rowIndex][columnIndex + 1] == 0){
 			cellPerimeter++;
 		}
 		return cellPerimeter;
@@ -46,5 +45,15 @@ public class IslandPerimeter {
 				{1, 1, 0, 0}
 		};*/
 		System.out.println("Island perimeter : " + new IslandPerimeter().islandPerimeter(grid));
+
+		// max column is test[i].length
+		// not test[0].length
+		int[][] test = {
+				{0, 1},
+				{0, 1, 2}
+		};
+		System.out.println("max row : " + test.length);
+		System.out.println("max column : " + test[0].length);
+		System.out.println("max column : " + test[1].length);
 	}
 }
