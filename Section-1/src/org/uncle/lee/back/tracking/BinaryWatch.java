@@ -8,12 +8,23 @@ import org.uncle.lee.log.LogUtils;
 public class BinaryWatch {
 	private static final String TAG = "BinaryWatch";
 	
-	public List<String> readBinaryWatch(int num) {
+	// exhaustive is sooo stupid
+	public List<String> readBinaryWatch0(int num) {
 		List<String> reslutList = new ArrayList<String>();
-		for(){
-			reslutList.add(calculateTime(hourTag, minuteTag));
-		}
+		
+/*		for(...){
+			addTimeIntoList(reslutList);
+		}*/
+		
 		return reslutList;
+	}
+	
+	protected void addTimeIntoList(List<String> reslutList, 
+			boolean[] hourTag, boolean[] minuteTag){
+		String time = calculateTime(hourTag, minuteTag);
+		if(time != null){
+			reslutList.add(time);
+		}
 	}
 	
 	public String calculateTime(boolean[] hourTag, boolean[] minuteTag){
@@ -64,5 +75,7 @@ public class BinaryWatch {
 		boolean[] minuteTag1 = {false, true, true, true, true, true};
 		LogUtils.d(TAG, "start calculate ...");
 		LogUtils.d(TAG, "time : " + new BinaryWatch().calculateTime(hourTag1, minuteTag1));
+		
+		LogUtils.d(TAG, Integer.bitCount(5));
 	}
 }
