@@ -2,7 +2,6 @@ package org.uncle.lee.hash.table;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.uncle.lee.log.LogUtils;
 
