@@ -24,6 +24,6 @@ public class Numberof1Bits {
 		LogUtils.d(TAG, "start");
 		LogUtils.d(TAG, Integer.bitCount(499999995));
 		LogUtils.d(TAG, "start");
-		LogUtils.d(TAG, new Numberof1Bits().hammingWeight(2147483648));
+//		LogUtils.d(TAG, new Numberof1Bits().hammingWeight(2147483648));
 	}
 }
