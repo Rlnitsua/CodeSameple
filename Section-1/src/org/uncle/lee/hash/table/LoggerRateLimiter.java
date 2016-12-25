@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoggerRateLimiter {
-	private static final String TAG = "LoggerRateLimiter";
+//	private static final String TAG = "LoggerRateLimiter";
 	
 	public static void main(String[] args) {
 		
