@@ -22,7 +22,7 @@ interface NestedInteger {
 }
 
 public class NestedListWeightSum {
-	private static final String TAG = "NestedListWeightSum";
+//	private static final String TAG = "NestedListWeightSum";
 	
 	public int depthSum(List<NestedInteger> nestedList) {
 		int depth = 0;
