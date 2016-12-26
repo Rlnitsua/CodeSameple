@@ -1,4 +1,4 @@
-package org.uncle.lee.hash.design;
+package org.uncle.lee.design;
 
 import java.util.ArrayList;
 import java.util.List;
