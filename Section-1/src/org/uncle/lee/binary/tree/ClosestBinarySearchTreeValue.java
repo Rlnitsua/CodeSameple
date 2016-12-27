@@ -1,6 +1,7 @@
 package org.uncle.lee.binary.tree;
 
 public class ClosestBinarySearchTreeValue {
+	private int error;
 	public int closestValue(TreeNode root, double target) {
 		if(root.left == null && root.right == null){
 			return root.val;
