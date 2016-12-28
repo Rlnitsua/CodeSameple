@@ -16,33 +16,23 @@ public class MergeTwoSortedLists {
 	private static final String TAG = "MergeTwoSortedLists";
 	
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-		ListNode head = l1;
-		while(l1.next != null){
-			if(l1.val < l2.val && l2.val < l1.next.val){
-				insertAfter(l1, l2);
-				l1 = l1.next;
-				l2 = l2.next;
-			}else {
-				l1 = l1.next;
-			}
+		if(l1 == null){
+			return l2;
+		}else if(l2 == null){
+			return l1;
 		}
 		
-		while(l2.next != null){
-			insertAfter(l1, l2);
-			l2 = l2.next;
+		ListNode mergedNode;
+		if(l1.val < l2.val){
+			mergedNode = l1;
+			mergedNode.next = mergeTwoLists(l1.next, l2);
+		}else {
+			mergedNode = l2;
+			mergedNode.next = mergeTwoLists(l1, l2.next);
 		}
-		
-		insertAfter(l1, l2);
-		
-		return head;
+		return mergedNode;
 	}
 
-	private void insertAfter(ListNode l1, ListNode l2) {
-		ListNode temp = l2;
-		temp.next = l1.next;
-		l1.next = temp;
-	}
-	
 	public static void main(String[] args) {
 		ListNode n1 = new ListNode(1);
 		ListNode n2 = new ListNode(2);
@@ -53,15 +43,15 @@ public class MergeTwoSortedLists {
 		n3.next = n4;
 		
 		ListNode n5 = new ListNode(4);
-		ListNode n6 = new ListNode(9);
-		n5.next = n6;
+//		ListNode n6 = new ListNode(9);
+//		n5.next = n6;
 		
 		LogUtils.d(TAG, "start");
 		new MergeTwoSortedLists().showList(new MergeTwoSortedLists().mergeTwoLists(n1, n5));
 	}
 	
 	private void showList(ListNode node){
-		while(node.next != null){
+		while(node != null){
 			LogUtils.d(TAG, node.val);
 			node = node.next;
 		}
