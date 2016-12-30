@@ -21,7 +21,9 @@ public class BinaryTreeLevelOrderTraversalII {
 		if(root == null){
 			return;
 		}
-		valList.add(new ArrayList<Integer>());
+		if(deep >= valList.size()){
+			valList.add(new ArrayList<Integer>());
+		}
 		
 		addValList(valList, root.left, deep + 1);
 		addValList(valList, root.right, deep + 1);
