@@ -1,6 +1,7 @@
 package org.uncle.lee.binay.tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.uncle.lee.log.LogUtils;
@@ -12,22 +13,22 @@ public class BinaryTreeLevelOrderTraversalII {
 		if(root == null){
 			return null;
 		}
-		List<List<Integer>> valList = new ArrayList<List<Integer>>();
+		LinkedList<List<Integer>> valList = new LinkedList<List<Integer>>();
 		addValList(valList, root, 0);
 		return valList;
 	}
 
-	private void addValList(List<List<Integer>> valList, TreeNode root, int deep) {
+	private void addValList(LinkedList<List<Integer>> valList, TreeNode root, int deep) {
 		if(root == null){
 			return;
 		}
 		if(deep >= valList.size()){
-			valList.add(new ArrayList<Integer>());
+			valList.addFirst(new LinkedList<Integer>());
 		}
 		
 		addValList(valList, root.left, deep + 1);
 		addValList(valList, root.right, deep + 1);
-		valList.get(deep).add(root.val);
+		valList.get(valList.size() - 1 - deep).add(root.val);
 	}
 	
 	public static void main(String[] args) {
