@@ -1,16 +1,7 @@
 package org.uncle.lee.linked.list;
 
 import org.uncle.lee.log.LogUtils;
-
-//  Definition for singly-linked list.
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-	}
-}
+import org.uncle.lee.util.ListNode;
 
 public class MergeTwoSortedLists {
 	private static final String TAG = "MergeTwoSortedLists";
