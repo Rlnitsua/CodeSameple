@@ -2,17 +2,6 @@ package org.uncle.lee.binary.tree;
 
 import org.uncle.lee.log.LogUtils;
 
-//  Definition for a binary tree node.
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-
-	TreeNode(int x) {
-		val = x;
-	}
-}
-
 public class LowestCommonAncestorofaBinarySearchTree {
 	private static final String TAG = "LowestCommonAncestorofaBinarySearchTree";
 	
