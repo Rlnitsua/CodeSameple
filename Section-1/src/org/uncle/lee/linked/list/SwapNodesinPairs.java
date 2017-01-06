@@ -11,22 +11,16 @@ public class SwapNodesinPairs {
 			return head;
 		}
 		
-		boolean isFirst = true;
-		
 		ListNode currentHead = head.next;
+		swap(head, head.next);
 		while (head != null && head.next != null
 				&& head.next.next != null) {
-			if(isFirst){
-				swap(head, head.next);
-				isFirst = false;
-			}else {
-				ListNode temp = head.next.next;
-				head.next.next = temp.next;
-				temp.next = head.next;
-				head.next = temp;
-				
-				head = head.next.next;
-			}
+			ListNode temp = head.next.next;
+			head.next.next = temp.next;
+			temp.next = head.next;
+			head.next = temp;
+			
+			head = head.next.next;
 		}
 		return currentHead;
 	}
