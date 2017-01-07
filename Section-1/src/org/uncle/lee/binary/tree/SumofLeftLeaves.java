@@ -1,4 +1,4 @@
-package org.uncle.lee.binay.tree;
+package org.uncle.lee.binary.tree;
 
 import org.uncle.lee.log.LogUtils;
 

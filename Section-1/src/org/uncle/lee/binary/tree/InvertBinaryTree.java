@@ -1,4 +1,4 @@
-package org.uncle.lee.binay.tree;
+package org.uncle.lee.binary.tree;
 
 public class InvertBinaryTree {
 	// Definition for a binary tree node.
