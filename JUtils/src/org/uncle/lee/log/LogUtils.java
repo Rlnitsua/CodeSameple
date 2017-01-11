@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.uncle.lee.time.TimeUtils;
 import org.uncle.lee.util.ListNode;
+import org.uncle.lee.util.TreeNode;
 
 public  class  LogUtils{
 	public static void d(String TAG, Object xMsg){
@@ -67,6 +68,18 @@ public  class  LogUtils{
 		sb.delete(sb.length() - 2, sb.length());
 		sb.append("]");
 		return new String(sb);
+	}
+	
+	public static void d(String TAG, TreeNode node){
+		String logLevel = "D/";
+		String msg = getTreeNodeValues(node);
+		String content = constructLogContent(logLevel, TAG, msg);
+		System.out.println(content);
+	}
+
+	private static String getTreeNodeValues(TreeNode node) {
+		
+		return null;
 	}
 
 	private static String constructLogContent(String logLevel, String TAG, String msg) {
