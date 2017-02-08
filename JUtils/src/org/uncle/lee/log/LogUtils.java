@@ -34,6 +34,13 @@ public  class  LogUtils{
 		System.out.println(content);
 	}
 	
+	public static void d(String TAG, Object[] array){
+		String logLevel = "D/";
+		String msg = Arrays.toString(array);
+		String content = constructLogContent(logLevel, TAG, msg);
+		System.out.println(content);
+	}
+	
 	public static void d(String TAG, int[][] array){
 		String logLevel = "D/";
 		String msg = getTwoDimensionArrayMsg(array);
