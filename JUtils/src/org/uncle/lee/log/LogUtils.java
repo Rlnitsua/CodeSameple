@@ -85,8 +85,18 @@ public  class  LogUtils{
 	}
 
 	private static String getTreeNodeValues(TreeNode node) {
-		
-		return null;
+		return treeNodeValues(node);
+	}
+
+	private static String treeNodeValues(TreeNode node) {
+		if(node == null){
+			return "";
+		}
+		StringBuffer sb = new StringBuffer();
+		sb.append(node.val + " ");
+		sb.append(treeNodeValues(node.left));
+		sb.append(treeNodeValues(node.right));
+		return new String(sb);
 	}
 
 	private static String constructLogContent(String logLevel, String TAG, String msg) {
