@@ -1,6 +1,7 @@
 package org.uncle.lee.binary.tree;
 
 import org.uncle.lee.log.LogUtils;
+import org.uncle.lee.util.TreeNode;
 
 public class LowestCommonAncestorofaBinarySearchTree {
 	private static final String TAG = "LowestCommonAncestorofaBinarySearchTree";

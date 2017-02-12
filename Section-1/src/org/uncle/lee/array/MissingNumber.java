@@ -25,5 +25,6 @@ public class MissingNumber {
 				17, 41, 7, 2, 5, 27, 20, 40, 34, 30, 25, 47, 0, 31, 42, 24, 10,
 				14 };
 		LogUtils.d(TAG, new MissingNumber().missingNumber(nums));
+		LogUtils.d(TAG, new MissingNumber().missingNumber(nums1));
 	}
 }
