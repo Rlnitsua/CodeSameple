@@ -1,5 +1,7 @@
 package org.uncle.lee.math;
 
+import java.util.Stack;
+
 import org.uncle.lee.log.LogUtils;
 
 public class Base7 {
@@ -15,13 +17,27 @@ public class Base7 {
 		}
 	}
 
-	private String getBase7(int num) {
+	public String getBase70(int num) {
 		StringBuffer sb = new StringBuffer();
 		while(num >= 1){
 			sb.append(num % 7);
 			num /= 7;
 		}
 		return new String(sb.reverse());
+	}
+	
+	private String getBase7(int num) {
+		Stack<Integer> stack = new Stack<Integer>();
+		while(num >= 1){
+			stack.push(num % 7);
+			num /= 7;
+		}
+		
+		StringBuffer sb = new StringBuffer();
+		while(stack.size() != 0){
+			sb.append(stack.pop());
+		}
+		return new String(sb);
 	}
 
 	public static void main(String[] args) {
