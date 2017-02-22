@@ -20,6 +20,12 @@ public  class  LogUtils{
 		System.out.println(content);
 	}
 	
+	public static void e(String TAG, String msg){
+		String logLevel = "E/";
+		String content = constructLogContent(logLevel, TAG, msg);
+		System.out.println(content);
+	}
+	
 	public static void d(String TAG, List<?> list){
 		String logLevel = "D/";
 		String msg = Arrays.toString(list.toArray());
@@ -66,6 +72,10 @@ public  class  LogUtils{
 	}
 	
 	private static String getListNodeValues(ListNode node) {
+		if(node == null){
+			return null;
+		}
+		
 		StringBuffer sb = new StringBuffer();
 		sb.append("[");
 		while(node != null){
