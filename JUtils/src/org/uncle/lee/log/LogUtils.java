@@ -40,6 +40,13 @@ public  class  LogUtils{
 		System.out.println(content);
 	}
 	
+	public static void d(String TAG, char[] chArray){
+		String logLevel = "D/";
+		String msg = Arrays.toString(chArray);
+		String content = constructLogContent(logLevel, TAG, msg);
+		System.out.println(content);
+	}
+	
 	public static void d(String TAG, Object[] array){
 		String logLevel = "D/";
 		String msg = Arrays.toString(array);
