@@ -1,7 +1,6 @@
 package org.uncle.lee.dynamic;
 
 public class RangeSumQueryImmutable_opt {
-	private static final String TAG = "RangeSumQueryImmutable_opt";
 	private int[] nums;
 	
 	public RangeSumQueryImmutable_opt(int[] nums) {

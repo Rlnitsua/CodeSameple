@@ -11,7 +11,6 @@ public class Sqrtx {
 			isNagetive = true;
 		}
 		
-		int absX = Math.abs(x);
 		int lo = 0;
 		int hi = Math.abs(x);
 		
