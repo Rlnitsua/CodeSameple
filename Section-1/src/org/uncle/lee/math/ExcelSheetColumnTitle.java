@@ -8,7 +8,7 @@ public class ExcelSheetColumnTitle {
 			n--;
 			int remain = n % 26;
 			sb.insert(0, (char)('A' + remain));
-			n /= 27;
+			n /= 26;
 		}
 		
 		return new String(sb);
