@@ -6,10 +6,21 @@ public class FirstBadVersion extends VersionControl {
 	private static final String TAG = "FirstBadVersion";
 	
 	public int firstBadVersion(int n) {
-		return getFristBadVersion(0, n);
+		int lo = 1, hi = n;
+		
+		while(lo < hi){
+			int mid = lo + ((hi - lo) >> 1);
+			if(isBadVersion(mid)){
+				hi = mid;
+			} else {
+				lo = mid + 1;
+			}
+		}
+		
+		return lo;
 	}
 	
-	private int getFristBadVersion(int lo, int hi){
+	public int getFristBadVersion(int lo, int hi){
 		int mid = 0;
 		if(lo < hi){
 			mid = lo + (hi - lo) >> 1;
