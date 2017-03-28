@@ -4,37 +4,35 @@ import java.util.List;
 
 public class NestedListWeightSumII {
 	public int depthSumInverse(List<NestedInteger> nestedList) {
-		int maxDeep = 0;
-		for(NestedInteger nestedI : nestedList){
-			maxDeep = Math.max(maxDeep, getMaxDeep(nestedI, 1));
-		}
-		
-		int sum = 0;
-		for(NestedInteger nestedI : nestedList){
-			sum += calculateSum(nestedI, maxDeep + 1, 0);
-		}
-		return sum;
+		int maxDeep = getMaxDeep(nestedList);
+		return depthSumInverse(nestedList, maxDeep);
 	}
-	
-	private int getMaxDeep(NestedInteger nestedNum, int maxDeep) {
-		if(nestedNum.isInteger()){
-			return maxDeep;
-		} else {
-			for(NestedInteger nestedEle : nestedNum.getList()){
-				maxDeep = Math.max(maxDeep, getMaxDeep(nestedEle, maxDeep - 1));
+
+	private int getMaxDeep(List<NestedInteger> nestedList) {
+		int maxDeep = 1;
+		
+		for(NestedInteger nestedNum : nestedList){
+			if(nestedNum.isInteger()){
+				continue;
+			} else {
+				maxDeep = getMaxDeep(nestedNum.getList()) + 1;
 			}
 		}
+		
 		return maxDeep;
 	}
 
-	private int calculateSum(NestedInteger nestedNum, int deep, int sum){
-		if(nestedNum.isInteger()){
-			sum += nestedNum.getInteger() * deep;
-		} else {
-			for(NestedInteger nestedEle : nestedNum.getList()){
-				sum += calculateSum(nestedEle, deep + 1, sum);
+	private int depthSumInverse(List<NestedInteger> nestedList, int maxDeep) {
+		int sum = 0;
+		
+		for(NestedInteger nestedNum : nestedList){
+			if(nestedNum.isInteger()){
+				sum += nestedNum.getInteger() * maxDeep;
+			} else {
+				sum += depthSumInverse(nestedNum.getList(), maxDeep - 1);
 			}
 		}
+		
 		return sum;
 	}
 }
