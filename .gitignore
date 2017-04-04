@@ -51,3 +51,7 @@ proguard/
 
 # Sonar
 .sonar
+
+# Eclipse
+.recommenders
+RemoteSystemsTempFiles
