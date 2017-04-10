@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Utils.Log
 {
-    public class TimeUtils
+    class TimeUtils
     {
         public static String GetCurrentTime()
         {
-            String timePattern = "MM-MM HH:mm:ss.fffff";
-            return new DateTime().ToString(timePattern);
+            return DateTime.Now.ToString("MM-MM HH:mm:ss.fffff");
         }
     }
 }
