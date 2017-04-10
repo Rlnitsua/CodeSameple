@@ -8,12 +8,19 @@ namespace Utils.Log
 {
     public class LogUtils
     {
-        public static String dVersion = "D";
-        public static String colonTag = ":";
-        public static String slashTag = "/";
-        public static String blankTag = " ";
+        private static String dVersion = "D";
+        private static String colonTag = ":";
+        private static String slashTag = "/";
+        private static String blankTag = " ";
 
         public static void D(String TAG, String content)
+        {
+            String currentTime = TimeUtils.GetCurrentTime();
+            String fileTag = dVersion + slashTag + TAG + colonTag + blankTag;
+            Console.WriteLine(currentTime + blankTag + fileTag + blankTag + content);
+        }
+
+        public static void D(String TAG, int content)
         {
             String currentTime = TimeUtils.GetCurrentTime();
             String fileTag = dVersion + slashTag + TAG + colonTag + blankTag;
