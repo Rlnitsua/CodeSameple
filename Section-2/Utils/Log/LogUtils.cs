@@ -16,7 +16,7 @@ namespace Utils.Log
         public static void D(String TAG, String content)
         {
             String currentTime = TimeUtils.GetCurrentTime();
-            String fileTag = dVersion + slashTag + TAG + colonTag + blankTag;
+            String fileTag = dVersion + slashTag + TAG + colonTag;
             Console.WriteLine(currentTime + blankTag + fileTag + blankTag + content);
         }
 
