@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS\TreeNode.cs" />
     <Compile Include="Log\LogUtils.cs" />
     <Compile Include="Log\TimeUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
