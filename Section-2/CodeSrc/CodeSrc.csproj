@@ -64,7 +64,9 @@
     <Compile Include="BST\MinimumAbsoluteDifferenceinBST.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringType\LongestUncommonSubsequenceI.cs" />
+    <Compile Include="StringType\ReverseStringII.cs" />
     <Compile Include="StringType\ReverseWordsinaStringIII.cs" />
+    <Compile Include="Tree\DiameterofBinaryTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
