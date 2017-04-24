@@ -11,32 +11,38 @@ namespace CodeSrc.Tree
     {
         public int DiameterOfBinaryTree(TreeNode root)
         {
+            var res = int.MinValue;
             if (root == null)
             {
                 return 0;
             }
-            else if (root.left == null || root.right == null)
-            {
-                return GetMaxDeep(root.left, 0) + GetMaxDeep(root.right, 0) + 1;
-            }
-            else
-            {
-                return GetMaxDeep(root.left, 0) + GetMaxDeep(root.right, 0) + 2;
-            }
+
+            res = Math.Max(res, CalculateLRSum(root));
+            res = Math.Max(res, DiameterOfBinaryTree(root.left));
+            res = Math.Max(res, DiameterOfBinaryTree(root.right));
+
+            return res;
         }
 
-        public int GetMaxDeep(TreeNode root, int deep)
+        private int CalculateLRSum(TreeNode root)
         {
             if (root == null)
             {
-                return deep - 1;
-            }
-            else if (root.left == null && root.right == null)
-            {
-                return deep;
+                return 0;
             }
 
-            return Math.Max(GetMaxDeep(root.left, deep + 1), GetMaxDeep(root.right, deep + 1));
+            int leftDeep = root.left == null ? 0 : getDeep(root.left);
+            int rightDeep = root.right == null ? 0 : getDeep(root.right);
+            return leftDeep + rightDeep;
+        }
+
+        private int getDeep(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+            return Math.Max(getDeep(root.left), getDeep(root.right)) + 1;
         }
     }
 }
