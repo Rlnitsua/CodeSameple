@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CodeSrc.StringType.ReverseStringII</StartupObject>
+    <StartupObject>CodeSrc.StringType.ValidWordAbbreviation</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,10 +63,13 @@
     <Compile Include="ArrayType\ArrayPartitionI.cs" />
     <Compile Include="BitManipulation\HammingDistance.cs" />
     <Compile Include="BST\MinimumAbsoluteDifferenceinBST.cs" />
+    <Compile Include="HashTableType\FindAllAnagramsinaString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringType\LongestUncommonSubsequenceI.cs" />
     <Compile Include="StringType\ReverseStringII.cs" />
     <Compile Include="StringType\ReverseWordsinaStringIII.cs" />
+    <Compile Include="StringType\StudentAttendanceRecordI.cs" />
+    <Compile Include="StringType\ValidWordAbbreviation.cs" />
     <Compile Include="Tree\BinaryTreeTilt.cs" />
     <Compile Include="Tree\DiameterofBinaryTree.cs" />
   </ItemGroup>
@@ -93,6 +96,8 @@
       <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
