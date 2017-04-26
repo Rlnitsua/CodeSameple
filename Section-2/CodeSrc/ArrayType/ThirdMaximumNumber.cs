@@ -14,45 +14,34 @@ namespace CodeSrc.ArrayType
 
         public int ThirdMax(int[] nums)
         {
-            DuplicateArr(nums);
-            return GetThirdNum(nums);
-        }
-
-        private void DuplicateArr(int[] nums)
-        {
-        }
-
-        private int GetThirdNum(int[] nums)
-        {
-            if (nums.Length == 1)
+            SortedSet<int> sortedSet = new SortedSet<int>();
+            foreach (int num in nums)
             {
-                return nums[0];
-            }
-            else if (nums.Length == 2)
-            {
-                return Math.Max(nums[0], nums[1]);
-            }
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < nums.Length - 1 - i; j++)
+                if (!sortedSet.Contains(num))
                 {
-                    if (nums[j] > nums[j + 1])
-                    {
-                        swap(nums, j, j + 1);
-                    }
+                    sortedSet.Add(num);
                 }
             }
-            return nums[nums.Length - 3];
-        }
 
-        private void swap(int[] nums, int i, int j)
-        {
-            int temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
-        }
+            if (sortedSet.Count < 3)
+            {
+                return sortedSet.Max;
+            }
 
+            int index = 0;
+            int res = 0;
+            foreach (int num in sortedSet)
+            {
+                res = num;
+                if (index == sortedSet.Count - 3)
+                {
+                    return res;
+                }
+                index++;
+            }
+            return res;
+        }
+        
         public static void Main(string[] args)
         {
             int[] arr = new int[] { 3, 2, 1};
