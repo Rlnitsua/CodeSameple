@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CodeSrc.DFS.FindLeavesofBinaryTree</StartupObject>
+    <StartupObject>CodeSrc.Graph.FriendCircles</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,7 +65,10 @@
     <Compile Include="BitManipulation\HammingDistance.cs" />
     <Compile Include="BST\MinimumAbsoluteDifferenceinBST.cs" />
     <Compile Include="DFS\FindLeavesofBinaryTree.cs" />
+    <Compile Include="DFS\NestedListWeightSumII.cs" />
+    <Compile Include="Graph\FriendCircles.cs" />
     <Compile Include="HashTableType\FindAllAnagramsinaString.cs" />
+    <Compile Include="Math\OptimalDivision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringType\LongestUncommonSubsequenceI.cs" />
     <Compile Include="StringType\ReverseStringII.cs" />

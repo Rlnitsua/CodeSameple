@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS\NestedInteger.cs" />
+    <Compile Include="DS\NestedIntegerImpl.cs" />
     <Compile Include="DS\TreeNode.cs" />
     <Compile Include="Log\LogUtils.cs" />
     <Compile Include="Log\TimeUtils.cs" />
