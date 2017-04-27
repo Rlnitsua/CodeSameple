@@ -11,7 +11,7 @@ namespace CodeSrc.StringType
         {
             if (a.Length != b.Length)
             {
-                return Math.Max(a.Length, b.Length);
+                return System.Math.Max(a.Length, b.Length);
             }
             else
             {

@@ -27,7 +27,7 @@ namespace CodeSrc.Tree
 
         private int CalculateTilt(TreeNode root)
         {
-            return Math.Abs(CalculateSum(root.left) - CalculateSum(root.right));
+            return System.Math.Abs(CalculateSum(root.left) - CalculateSum(root.right));
         }
 
         private int CalculateSum(TreeNode root)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Utils.DS;
 
 namespace CodeSrc.BST
@@ -34,7 +30,7 @@ namespace CodeSrc.BST
             int minDiff = int.MaxValue;
             for (int i = 0; i < (valList.Count - 1); i++)
             {
-                minDiff = Math.Min(minDiff, Math.Abs(valList[i + 1] - valList[i]));
+                minDiff = System.Math.Min(minDiff, System.Math.Abs(valList[i + 1] - valList[i]));
             }
             return minDiff;
         }

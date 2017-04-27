@@ -17,9 +17,9 @@ namespace CodeSrc.Tree
                 return 0;
             }
 
-            res = Math.Max(res, CalculateLRSum(root));
-            res = Math.Max(res, DiameterOfBinaryTree(root.left));
-            res = Math.Max(res, DiameterOfBinaryTree(root.right));
+            res = System.Math.Max(res, CalculateLRSum(root));
+            res = System.Math.Max(res, DiameterOfBinaryTree(root.left));
+            res = System.Math.Max(res, DiameterOfBinaryTree(root.right));
 
             return res;
         }
@@ -42,7 +42,7 @@ namespace CodeSrc.Tree
             {
                 return 0;
             }
-            return Math.Max(getDeep(root.left), getDeep(root.right)) + 1;
+            return System.Math.Max(getDeep(root.left), getDeep(root.right)) + 1;
         }
     }
 }
