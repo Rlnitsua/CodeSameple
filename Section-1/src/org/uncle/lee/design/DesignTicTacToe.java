@@ -1,7 +1,6 @@
 package org.uncle.lee.design;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -98,7 +97,7 @@ public class DesignTicTacToe {
 
 	private boolean findDiagonal(int row, int col,
 			List<double[]> playerPoints, Set<Double> playerDisc) {
-		if((playerDisc.size() == size - 1) && (playerDisc.contains(o))){}
+		if((playerDisc.size() == size - 1) && (playerDisc.contains(Double.valueOf(0)))){}
 		for(double[] playerP : playerPoints){
 			if(row != playerP[0]){
 				double disc = (col - playerP[1])/(row - playerP[0]);
@@ -133,9 +132,10 @@ public class DesignTicTacToe {
 	private void addPointerCowCol(int row, int col, Set<Integer> playerRows,
 			Set<Integer> playerCols) {
 		playerRows.add(row);
-		Collections.sort(playerRows);
+		// error invoke in jdk 1.8
+//		Collections.sort(playerRows);
 		playerCols.add(col);
-		Collections.sort(playerCols);
+//		Collections.sort(playerCols);
 	}
 
 	public static void main(String[] args) {
