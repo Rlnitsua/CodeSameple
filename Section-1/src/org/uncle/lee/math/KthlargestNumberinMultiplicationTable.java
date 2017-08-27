@@ -10,12 +10,12 @@ public class KthlargestNumberinMultiplicationTable {
 	private static final String TAG = "KthlargestNumberinMultiplicationTable";
 	
 	public int findKthNumber(int m, int n, int k) {
-		List<Integer> numList = getList(m, n);
+		List<Integer> numList = getPosition(m, n);
 		Collections.sort(numList);
 		return numList.get(k - 1);
 	}
 
-	private int getPosition(int x, int y, int m, int n) {
+	private List<Integer> getPosition(int m, int n) {
 		List<Integer> numList = new ArrayList<>();
 		for (int row = 1; row <= m; row++) {
 			for (int column = 1; column <= n; column++) {
