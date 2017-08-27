@@ -1,30 +1,51 @@
 package org.uncle.lee.binary.tree;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.uncle.lee.util.TreeNode;
 
 public class PrintBinaryTree {
 	public List<List<String>> printTree(TreeNode root) {
-		int deep = getTreeDeep(root);
-		int maxLength = getMaxLength(deep);
+		List<List<String>> res = new ArrayList<>();
 		
-		return null;
+		int deep = calculateDeep(root);
+		String[][] resArr = new String[deep][(1 << deep) - 1];
+		initResArr(resArr);
+		
+		fill(resArr, root, 0, 0, resArr[0].length);
+		
+		copyArrToRes(resArr, res);
+		return res;
 	}
 	
-	private int getTreeDeep(TreeNode root) {
+	private int calculateDeep(TreeNode root) {
 		if(root == null) {
 			return 0;
 		}
-		
-		return Math.max(getTreeDeep(root.left) + 1, getTreeDeep(root.right) + 1);
+		return 1 + Math.max(calculateDeep(root.left), calculateDeep(root.right));
 	}
 	
-	private int getMaxLength(int deep) {
-		if(deep == 1) {
-			return 1;
+	private void initResArr(String[][] resArr) {
+		for(String[] resItem : resArr) {
+			Arrays.fill(resItem, "");
 		}
-		
-		return (int) (Math.pow(2, deep -1) + getMaxLength(deep - 1));
 	}
+	
+	private void fill(String[][] resArr, TreeNode root, int deep, int leftIndex, int rightIndex) {
+		if(root == null) {
+			return;
+		}
+		resArr[deep][(leftIndex + rightIndex) /2] = String.valueOf(root.val);
+		fill(resArr, root.left, deep + 1, leftIndex, (leftIndex + rightIndex) /2);
+		fill(resArr, root.right, deep + 1, (leftIndex + rightIndex) /2, rightIndex);
+	}
+
+	private void copyArrToRes(String[][] resArr, List<List<String>> res) {
+		for(String[] resItem : resArr) {
+			res.add(Arrays.asList(resItem));
+		}
+	}
+
 }
