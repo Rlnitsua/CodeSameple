@@ -1,5 +1,10 @@
 package org.uncle.lee.binary.tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.uncle.lee.log.LogUtils;
+
 /*
 If the depth of a tree is smaller than 5, then this tree can be represented by a list of three-digits integers.
 
@@ -36,20 +41,74 @@ The path sum is (3 + 1) = 4.
 */
 
 public class PathSumIV {
+	private static final String TAG = "PathSumIV";
+	
 	public int pathSum(int[] nums) {
-		int[][] numNodeArr = new int[4][8];
+		List<Integer> noteList = new ArrayList<>();
 		
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				numNodeArr[i][j] = -1;
+		for (int i = 1; i <= 4; i++) {
+			for (int j = 1; j <= Math.pow(2, i - 1); j++) {
+				if (hasNode(i, j, nums) && hasNoChild(i, j, nums)) {
+					noteList.add(getCurrentNode(i, j, nums));
+				}
 			}
 		}
 		
-		for (int num : nums) {
-			numNodeArr[(num / 100) - 1][((num / 10) % 10) - 1] = num;
+		int res = 0;
+		for (int note : noteList) {
+			res += calculateNotePathSum(note, nums);
 		}
 		
+		return res;
+	}
+
+	private boolean hasNoChild(int i, int j, int[] nums) {
+		int leftChild = (i + 1) * 10 + (2 * j - 1);
+		int rightChild = (i + 1) * 10 + (2 * j);
+		for (int num : nums) {
+			if ((num / 10) == leftChild || (num / 10) == rightChild) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private boolean hasNode(int i, int j, int[] nums) {
+		return getCurrentNode(i, j, nums) != -1;
+	}
+
+	private Integer getCurrentNode(int i, int j, int[] nums) {
+		int index = i * 10 + j;
+		for (int num : nums) {
+			if ((num / 10) == index) {
+				return num;
+			}
+		}
+		return -1;
+	}
+	
+	private int calculateNotePathSum(int note, int[] nums) {
+		int floor = note / 100;
+		int index = (note / 10) % 10;
 		
-		return 0;
+		int sum = note % 10;
+		if (floor == 1) {
+			return sum;
+		}
+
+		
+		for (int i = floor - 1; i >= 1; i--) {
+			index = (index + 1) >> 1;
+			sum += getCurrentNode(i, index, nums) % 10;
+		}
+		
+		return sum;
+	}
+	
+	public static void main(String[] args) {
+		PathSumIV sum = new PathSumIV();
+//		int[] nums = new int[] {113, 215, 221};
+		int[] nums = new int[] {115,215,224,325,336,446,458};
+		LogUtils.d(TAG, sum.pathSum(nums));
 	}
 }
