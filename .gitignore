@@ -15,6 +15,7 @@ tags
 # Eclipse build classpath files
 #*.classpath
 #*.project
+.project
 
 #IntelliJ IDEA project files and directories
 *.iml
