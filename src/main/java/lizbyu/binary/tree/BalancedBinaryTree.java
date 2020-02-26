@@ -1,7 +1,7 @@
 package lizbyu.binary.tree;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class BalancedBinaryTree {
 	private static final String TAG = "BalancedBinaryTree";

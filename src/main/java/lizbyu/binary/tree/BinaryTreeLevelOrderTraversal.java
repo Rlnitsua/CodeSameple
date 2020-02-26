@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class BinaryTreeLevelOrderTraversal {
 	private static final String TAG = "BinaryTreeLevelOrderTraversal";

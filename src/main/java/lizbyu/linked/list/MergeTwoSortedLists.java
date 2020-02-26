@@ -1,7 +1,7 @@
 package lizbyu.linked.list;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.ListNode;
+import lizbyu.utils.node.ListNode;
 
 public class MergeTwoSortedLists {
 	private static final String TAG = "MergeTwoSortedLists";

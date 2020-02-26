@@ -2,8 +2,8 @@ package lizbyu.linked.list;
 
 import java.util.Stack;
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.ListNode;
-import lizbyu.utils.util.ListNodeCreater;
+import lizbyu.utils.node.ListNode;
+import lizbyu.utils.node.ListNodeCreater;
 
 public class AddTwoNumbersII {
 	private static final String TAG = "AddTwoNumbersII";

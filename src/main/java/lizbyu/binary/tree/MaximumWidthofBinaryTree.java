@@ -1,6 +1,6 @@
 package lizbyu.binary.tree;
 
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class MaximumWidthofBinaryTree {
 	public int widthOfBinaryTree(TreeNode root) {

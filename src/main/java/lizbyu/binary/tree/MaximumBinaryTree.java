@@ -3,7 +3,7 @@ package lizbyu.binary.tree;
 import java.util.Arrays;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class MaximumBinaryTree {
 	private static final String TAG = "MaximumBinaryTree";

@@ -1,7 +1,7 @@
 package lizbyu.binary.tree;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class EqualTreePartition {
 	private static final String TAG = "EqualTreePartition";

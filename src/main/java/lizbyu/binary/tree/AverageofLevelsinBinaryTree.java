@@ -3,7 +3,7 @@ package lizbyu.binary.tree;
 import java.util.ArrayList;
 import java.util.List;
 
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class AverageofLevelsinBinaryTree {
 	public List<Double> averageOfLevels(TreeNode root) {

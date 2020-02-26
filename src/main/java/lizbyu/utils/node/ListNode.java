@@ -1,4 +1,4 @@
-package lizbyu.utils.util;
+package lizbyu.utils.node;
 
 public class ListNode {
 	public int val;

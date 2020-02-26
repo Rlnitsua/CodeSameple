@@ -1,7 +1,7 @@
 package lizbyu.linked.list;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.ListNode;
+import lizbyu.utils.node.ListNode;
 
 public class SwapNodesinPairs {
 	private static final String TAG = "SwapNodesinPairs";

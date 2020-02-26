@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class TwoSumIVInputisaBST {
 	private static final String TAG = "TwoSumIVInputisaBST";

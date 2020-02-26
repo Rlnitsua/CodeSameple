@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import lizbyu.utils.time.TimeUtils;
-import lizbyu.utils.util.ListNode;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.ListNode;
+import lizbyu.utils.node.TreeNode;
 
 public  class  LogUtils{
 	public static void d(String TAG, Object xMsg){

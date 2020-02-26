@@ -1,4 +1,4 @@
-package lizbyu.utils.util;
+package lizbyu.utils.node;
 
 public class TreeNode {
 	public int val;

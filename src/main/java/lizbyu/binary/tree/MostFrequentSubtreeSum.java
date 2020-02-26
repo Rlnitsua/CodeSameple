@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class MostFrequentSubtreeSum {
 	private static final String TAG = "MostFrequentSubtreeSum";

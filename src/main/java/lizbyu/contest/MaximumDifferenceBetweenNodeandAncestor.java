@@ -3,7 +3,7 @@ package lizbyu.contest;
 import java.util.ArrayList;
 import java.util.List;
 
-import lizbyu.utils.util.TreeNode;
+import lizbyu.utils.node.TreeNode;
 
 public class MaximumDifferenceBetweenNodeandAncestor {
     public int maxAncestorDiff(TreeNode root) {

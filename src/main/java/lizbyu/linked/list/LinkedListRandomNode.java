@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import lizbyu.utils.util.ListNode;
+import lizbyu.utils.node.ListNode;
 
 public class LinkedListRandomNode {
 	private List<Integer> valueList;

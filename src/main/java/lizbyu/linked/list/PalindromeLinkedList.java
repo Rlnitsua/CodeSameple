@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lizbyu.utils.log.LogUtils;
-import lizbyu.utils.util.ListNode;
+import lizbyu.utils.node.ListNode;
 
 public class PalindromeLinkedList {
 	private static final String TAG = "PalindromeLinkedList";
