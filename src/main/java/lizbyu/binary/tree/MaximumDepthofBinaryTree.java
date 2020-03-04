@@ -22,6 +22,18 @@ public class MaximumDepthofBinaryTree {
 		}
 		return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 	}
+
+	private int deep;
+	// maxDepth(root, 1)
+	public void maxDepth(TreeNode root, int currentDeep) {
+		if (root == null) {
+			return;
+		}
+
+		deep = deep < currentDeep ? currentDeep : deep;
+		maxDepth(root.left, currentDeep + 1);
+		maxDepth(root.right, currentDeep + 1);
+	}
 	
 	public static void main(String[] args) {
 		TreeNode node1 = new MaximumDepthofBinaryTree().new TreeNode(1);
