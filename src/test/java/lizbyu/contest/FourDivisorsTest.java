@@ -23,7 +23,7 @@ public class FourDivisorsTest {
     public static Collection<Object[]> prepareData() {
         return Arrays.asList(new Object[][]{
                 {new int[]{21,4,7}, 32},
-                {new int[]{7286,18704,70773,8224,91675}, 32}
+                {new int[]{7286,18704,70773,8224,91675}, 10932}
         });
     }
 
