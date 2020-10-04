@@ -1,4 +1,4 @@
-package lizbyu.divide.and.conquer;
+package lizbyu.divide.conquer;
 
 import java.util.HashMap;
 import java.util.Map;

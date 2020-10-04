@@ -1,4 +1,4 @@
-package lizbyu.divide.and.conquer;
+package lizbyu.divide.conquer;
 
 public class KthLargest {
 	public int findKthLargest(int[] nums, int k) {

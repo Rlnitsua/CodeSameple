@@ -1,4 +1,4 @@
-package lizbyu.divide.and.conquer;
+package lizbyu.divide.conquer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
