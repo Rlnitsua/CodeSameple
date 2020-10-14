@@ -68,7 +68,7 @@ public class DisplayTableofFoodOrdersinaRestaurant {
         return res;
     }
 
-    private class Order implements Comparable<Order>{
+    private class Order implements Comparable<Order> {
         private int tableID;
         private String foodName;
 
@@ -102,22 +102,22 @@ public class DisplayTableofFoodOrdersinaRestaurant {
 
     public static void main(String[] args) {
         List<List<String>> in = new ArrayList<>();
-        in.add(Arrays.asList("CWdAM","10"," FlzD"));
-        in.add(Arrays.asList(" T","17","ok"));
-        in.add(Arrays.asList("hai ","17","BlXft"));
-        in.add(Arrays.asList("cTIg","15","MAvix"));
-        in.add(Arrays.asList("jxK","9"," FlzD"));
-        in.add(Arrays.asList("vqkCX","14","pLg"));
-        in.add(Arrays.asList("qwqB","3","yPsk"));
-        in.add(Arrays.asList("YR","15","zG"));
-        in.add(Arrays.asList("ovex","11","pLg"));
-        in.add(Arrays.asList("zHeWJ","14","TdmVi"));
-        in.add(Arrays.asList("L ","9","Ey"));
-        in.add(Arrays.asList("lyS","14","zG"));
-        in.add(Arrays.asList("vasR","14","ok"));
-        in.add(Arrays.asList("NtfZt","14","yPsk"));
-        in.add(Arrays.asList("IN","5","xau"));
-        in.add(Arrays.asList("GQ","5","bcr"));
+        in.add(Arrays.asList("CWdAM", "10", " FlzD"));
+        in.add(Arrays.asList(" T", "17", "ok"));
+        in.add(Arrays.asList("hai ", "17", "BlXft"));
+        in.add(Arrays.asList("cTIg", "15", "MAvix"));
+        in.add(Arrays.asList("jxK", "9", " FlzD"));
+        in.add(Arrays.asList("vqkCX", "14", "pLg"));
+        in.add(Arrays.asList("qwqB", "3", "yPsk"));
+        in.add(Arrays.asList("YR", "15", "zG"));
+        in.add(Arrays.asList("ovex", "11", "pLg"));
+        in.add(Arrays.asList("zHeWJ", "14", "TdmVi"));
+        in.add(Arrays.asList("L ", "9", "Ey"));
+        in.add(Arrays.asList("lyS", "14", "zG"));
+        in.add(Arrays.asList("vasR", "14", "ok"));
+        in.add(Arrays.asList("NtfZt", "14", "yPsk"));
+        in.add(Arrays.asList("IN", "5", "xau"));
+        in.add(Arrays.asList("GQ", "5", "bcr"));
         DisplayTableofFoodOrdersinaRestaurant demo = new DisplayTableofFoodOrdersinaRestaurant();
         demo.displayTable(in);
     }

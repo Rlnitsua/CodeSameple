@@ -1,9 +1,5 @@
 package lizbyu.array;
 
-import javafx.collections.transformation.SortedList;
-
-import java.util.List;
-
 public class LongestContinuousSubarrayWithAbsoluteDiffLessThanorEqualtoLimit {
     public int longestSubarray(int[] nums, int limit) {
         int res = 0;

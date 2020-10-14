@@ -1,6 +1,6 @@
 package lizbyu.array;
 
-public class LongestMountaininArray{
+public class LongestMountaininArray {
 
     public int longestMountain(int[] A) {
         return longestMountain(A, 0, 0);

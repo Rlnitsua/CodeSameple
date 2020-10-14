@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class VerifyinganAlienDictionaryTest {
@@ -24,9 +24,9 @@ public class VerifyinganAlienDictionaryTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new String[]{"hello","leetcode"}, "hlabcdefgijkmnopqrstuvwxyz", true},
-                {new String[]{"word","world","row"}, "worldabcefghijkmnpqstuvxyz", false},
-                {new String[]{"apple","app"}, "abcdefghijklmnopqrstuvwxyz", false},
+                {new String[]{"hello", "leetcode"}, "hlabcdefgijkmnopqrstuvwxyz", true},
+                {new String[]{"word", "world", "row"}, "worldabcefghijkmnpqstuvxyz", false},
+                {new String[]{"apple", "app"}, "abcdefghijklmnopqrstuvwxyz", false},
         });
     }
 

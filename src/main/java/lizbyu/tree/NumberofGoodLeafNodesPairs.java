@@ -22,6 +22,7 @@ public class NumberofGoodLeafNodesPairs {
     }
 
     int val = 0;
+
     private void preHandle(TreeNode root) {
         if (root == null) {
             return;

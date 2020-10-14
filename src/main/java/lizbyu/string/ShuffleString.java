@@ -7,6 +7,6 @@ public class ShuffleString {
         for (int i = 0; i < s.length(); i++) {
             resChars[indices[i]] = s.charAt(i);
         }
-        return  String.valueOf(resChars);
+        return String.valueOf(resChars);
     }
 }

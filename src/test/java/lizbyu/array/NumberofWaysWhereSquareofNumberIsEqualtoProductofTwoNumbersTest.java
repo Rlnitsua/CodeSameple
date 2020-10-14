@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class NumberofWaysWhereSquareofNumberIsEqualtoProductofTwoNumbersTest {
@@ -24,11 +24,11 @@ public class NumberofWaysWhereSquareofNumberIsEqualtoProductofTwoNumbersTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{7,4}, new int[]{5,2,8,9}, 1},
-                {new int[]{1,1}, new int[]{1,1,1}, 9},
-                {new int[]{7,7,8,3}, new int[]{1,2,9,7}, 2},
-                {new int[]{4,7,9,11,23}, new int[]{3,5,1024,12,18}, 0},
-                {new int[]{43024,99908}, new int[]{1864}, 0},
+                {new int[]{7, 4}, new int[]{5, 2, 8, 9}, 1},
+                {new int[]{1, 1}, new int[]{1, 1, 1}, 9},
+                {new int[]{7, 7, 8, 3}, new int[]{1, 2, 9, 7}, 2},
+                {new int[]{4, 7, 9, 11, 23}, new int[]{3, 5, 1024, 12, 18}, 0},
+                {new int[]{43024, 99908}, new int[]{1864}, 0},
         });
     }
 

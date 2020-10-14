@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class XOROperationinanArrayTest {
@@ -24,10 +24,10 @@ public class XOROperationinanArrayTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {5,0,8},
-                {4,3,8},
-                {1,7,7},
-                {10,5,2},
+                {5, 0, 8},
+                {4, 3, 8},
+                {1, 7, 7},
+                {10, 5, 2},
         });
     }
 

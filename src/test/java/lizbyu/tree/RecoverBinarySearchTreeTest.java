@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 public class RecoverBinarySearchTreeTest {
@@ -24,8 +24,8 @@ public class RecoverBinarySearchTreeTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {TreeNodes.create(Arrays.asList(1,3,null,null,2)), TreeNodes.create(Arrays.asList(3,1,null,null,2))},
-                {TreeNodes.create(Arrays.asList(3,1,4,null,null,2)), TreeNodes.create(Arrays.asList(2,1,4,null,null,3))},
+                {TreeNodes.create(Arrays.asList(1, 3, null, null, 2)), TreeNodes.create(Arrays.asList(3, 1, null, null, 2))},
+                {TreeNodes.create(Arrays.asList(3, 1, 4, null, null, 2)), TreeNodes.create(Arrays.asList(2, 1, 4, null, null, 3))},
         });
     }
 

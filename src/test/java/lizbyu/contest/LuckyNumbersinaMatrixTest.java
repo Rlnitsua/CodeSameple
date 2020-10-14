@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 public class LuckyNumbersinaMatrixTest {
@@ -27,9 +27,9 @@ public class LuckyNumbersinaMatrixTest {
     @Parameterized.Parameters
     public static Collection<Object[]> preparData() {
         return Arrays.asList(new Object[][]{
-                {new int[][]{{3,7,8}, {9,11,13}, {15,16,17}}, Arrays.asList(15)},
-                {new int[][]{{1,10,4,2}, {9,3,8,7}, {15,16,17,12}}, Arrays.asList(12)},
-                {new int[][]{{7,8}, {1,2}}, Arrays.asList(7)}
+                {new int[][]{{3, 7, 8}, {9, 11, 13}, {15, 16, 17}}, Arrays.asList(15)},
+                {new int[][]{{1, 10, 4, 2}, {9, 3, 8, 7}, {15, 16, 17, 12}}, Arrays.asList(12)},
+                {new int[][]{{7, 8}, {1, 2}}, Arrays.asList(7)}
         });
     }
 

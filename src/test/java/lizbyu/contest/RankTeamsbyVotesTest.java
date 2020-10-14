@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class RankTeamsbyVotesTest {
@@ -22,10 +22,10 @@ public class RankTeamsbyVotesTest {
     @Parameterized.Parameters(name = "{index} --- param : {0}")
     public static Collection<Object[]> prepareData() {
         return Arrays.asList(new Object[][]{
-                {new String[]{"ABC","ACB","ABC","ACB","ACB"}, "ACB"},
-                {new String[]{"WXYZ","XYZW"}, "XWYZ"},
-                {new String[]{"BCA","CAB","CBA","ABC","ACB","BAC"}, "ABC"},
-                {new String[]{"M","M","M","M"}, "M"}
+                {new String[]{"ABC", "ACB", "ABC", "ACB", "ACB"}, "ACB"},
+                {new String[]{"WXYZ", "XYZW"}, "XWYZ"},
+                {new String[]{"BCA", "CAB", "CBA", "ABC", "ACB", "BAC"}, "ABC"},
+                {new String[]{"M", "M", "M", "M"}, "M"}
         });
     }
 

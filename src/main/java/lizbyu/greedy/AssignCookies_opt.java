@@ -1,26 +1,26 @@
 package lizbyu.greedy;
 
-import java.util.Arrays;
-
 import lizbyu.utils.log.LogUtils;
 
+import java.util.Arrays;
+
 public class AssignCookies_opt {
-	private static final String TAG = "AssignCookies_opt";
-	
-	public int findContentChildren(int[] g, int[] s) {
-		Arrays.sort(g);
-		Arrays.sort(s);
-		
-		int childIndex = 0;
-		for(int cookieIndex = 0; cookieIndex < s.length && childIndex < g.length; cookieIndex++){
-			if(g[childIndex] <= s[cookieIndex]){
-				childIndex++;
-			}
-		}
-		return childIndex;
-	}
-	
-	public static void main(String[] args) {
+    private static final String TAG = "AssignCookies_opt";
+
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+
+        int childIndex = 0;
+        for (int cookieIndex = 0; cookieIndex < s.length && childIndex < g.length; cookieIndex++) {
+            if (g[childIndex] <= s[cookieIndex]) {
+                childIndex++;
+            }
+        }
+        return childIndex;
+    }
+
+    public static void main(String[] args) {
 //		int[] children = {1, 2, 3};
 //		int[] cookies = {1, 1};
 		
@@ -66,10 +66,10 @@ public class AssignCookies_opt {
 				231,311,204,99,82,52,66,286,142,27,445,12,410,370,118,104,358,330,96,351,93,
 				469,63,450,14,455,309,84,101,58,166,224,34,158,322,388,345,328,329,509,168,292,
 				367,5,309,477,75,306,524,416,35,417,229,448,513,99,179,526,147,390,260,459,394,503,414, 490};*/
-		
-		int[] children = {10,9,8,7,10,9,8,7};
-		int[] cookies = {10,9,8,7};
-		LogUtils.d(TAG, "start");
-		LogUtils.d(TAG, new AssignCookies_opt().findContentChildren(children, cookies));
-	}
+
+        int[] children = {10, 9, 8, 7, 10, 9, 8, 7};
+        int[] cookies = {10, 9, 8, 7};
+        LogUtils.d(TAG, "start");
+        LogUtils.d(TAG, new AssignCookies_opt().findContentChildren(children, cookies));
+    }
 }

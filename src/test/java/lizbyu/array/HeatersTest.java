@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class HeatersTest {
@@ -24,10 +24,10 @@ public class HeatersTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{1,2,3}, new int[]{2}, 1},
-                {new int[]{1,2,3,4}, new int[]{1,4}, 1},
-                {new int[]{1,5}, new int[]{2}, 3},
-                {new int[]{1,2,3}, new int[]{1}, 2},
+                {new int[]{1, 2, 3}, new int[]{2}, 1},
+                {new int[]{1, 2, 3, 4}, new int[]{1, 4}, 1},
+                {new int[]{1, 5}, new int[]{2}, 3},
+                {new int[]{1, 2, 3}, new int[]{1}, 2},
         });
     }
 

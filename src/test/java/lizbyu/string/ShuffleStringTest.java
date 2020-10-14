@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class ShuffleStringTest {
@@ -24,11 +24,11 @@ public class ShuffleStringTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {"codeleet", new int[]{4,5,6,7,0,2,1,3}, "leetcode"},
-                {"abc", new int[]{0,1,2}, "abc"},
-                {"aiohn", new int[]{3,1,4,2,0}, "nihao"},
-                {"aaiougrt", new int[]{4,0,2,6,7,3,1,5}, "arigatou"},
-                {"art", new int[]{1,0,2}, "rat"},
+                {"codeleet", new int[]{4, 5, 6, 7, 0, 2, 1, 3}, "leetcode"},
+                {"abc", new int[]{0, 1, 2}, "abc"},
+                {"aiohn", new int[]{3, 1, 4, 2, 0}, "nihao"},
+                {"aaiougrt", new int[]{4, 0, 2, 6, 7, 3, 1, 5}, "arigatou"},
+                {"art", new int[]{1, 0, 2}, "rat"},
         });
     }
 

@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
 public class RunningSumof1dArrayTest {
@@ -24,7 +24,7 @@ public class RunningSumof1dArrayTest {
         return Arrays.asList(new Object[][]{
                 {new int[]{1, 2, 3, 4}, new int[]{1, 3, 6, 10}},
                 {new int[]{1, 1, 1, 1, 1}, new int[]{1, 2, 3, 4, 5}},
-                {new int[]{3, 1, 2, 10, 1}, new int[]{3 ,4, 6, 16, 17}},
+                {new int[]{3, 1, 2, 10, 1}, new int[]{3, 4, 6, 16, 17}},
         });
     }
 

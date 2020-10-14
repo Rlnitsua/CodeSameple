@@ -11,7 +11,8 @@ public class PopulatingNextRightPointersinEachNode {
         public Node right;
         public Node next;
 
-        public Node() {}
+        public Node() {
+        }
 
         public Node(int _val) {
             val = _val;
@@ -33,7 +34,7 @@ public class PopulatingNextRightPointersinEachNode {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
 
-        while(queue.size() > 0) {
+        while (queue.size() > 0) {
             int size = queue.size();
 
             for (int i = 0; i < size; i++) {

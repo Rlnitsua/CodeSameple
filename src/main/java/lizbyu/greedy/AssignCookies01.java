@@ -1,48 +1,48 @@
 package lizbyu.greedy;
 
+import lizbyu.utils.log.LogUtils;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import lizbyu.utils.log.LogUtils;
-
 public class AssignCookies01 {
-	private static final String TAG = "AssignCookies01";
-	
-	public int findContentChildren(int[] g, int[] s) {
-		int maxContentCount = 0;
-		int cookieMark = 0;
-		List<Integer> children = getList(g);
-		List<Integer> cookies = getList(s);
-		Collections.sort(children);
-		Collections.sort(cookies);
-		
-		for(int childIndex = 0; childIndex < children.size(); childIndex++){
-			for(int cookieIndex = cookieMark; cookieIndex < cookies.size(); cookieIndex++){
-				if(children.get(childIndex) <= cookies.get(cookieIndex)) {
-					maxContentCount++;
-					if(cookieIndex == (cookies.size() - 1)){
-						return maxContentCount;
-					}else {
-						cookieMark = cookieIndex + 1;
-					}
-					break;
-				}
-			}
-		}
-		
-		return maxContentCount;
-	}
+    private static final String TAG = "AssignCookies01";
 
-	private List<Integer> getList(int[] array) {
-		List<Integer> list = new ArrayList<Integer>();
-		for(int num : array){
-			list.add(num);
-		}
-		return list;
-	}
-	
-	public static void main(String[] args) {
+    public int findContentChildren(int[] g, int[] s) {
+        int maxContentCount = 0;
+        int cookieMark = 0;
+        List<Integer> children = getList(g);
+        List<Integer> cookies = getList(s);
+        Collections.sort(children);
+        Collections.sort(cookies);
+
+        for (int childIndex = 0; childIndex < children.size(); childIndex++) {
+            for (int cookieIndex = cookieMark; cookieIndex < cookies.size(); cookieIndex++) {
+                if (children.get(childIndex) <= cookies.get(cookieIndex)) {
+                    maxContentCount++;
+                    if (cookieIndex == (cookies.size() - 1)) {
+                        return maxContentCount;
+                    } else {
+                        cookieMark = cookieIndex + 1;
+                    }
+                    break;
+                }
+            }
+        }
+
+        return maxContentCount;
+    }
+
+    private List<Integer> getList(int[] array) {
+        List<Integer> list = new ArrayList<Integer>();
+        for (int num : array) {
+            list.add(num);
+        }
+        return list;
+    }
+
+    public static void main(String[] args) {
 //		int[] children = {1, 2, 3};
 //		int[] cookies = {1, 1};
 		
@@ -88,10 +88,10 @@ public class AssignCookies01 {
 				231,311,204,99,82,52,66,286,142,27,445,12,410,370,118,104,358,330,96,351,93,
 				469,63,450,14,455,309,84,101,58,166,224,34,158,322,388,345,328,329,509,168,292,
 				367,5,309,477,75,306,524,416,35,417,229,448,513,99,179,526,147,390,260,459,394,503,414, 490};*/
-		
-		int[] children = {10,9,8,7,10,9,8,7};
-		int[] cookies = {10,9,8,7};
-		LogUtils.d(TAG, "start");
-		LogUtils.d(TAG, new AssignCookies01().findContentChildren(children, cookies));
-	}
+
+        int[] children = {10, 9, 8, 7, 10, 9, 8, 7};
+        int[] cookies = {10, 9, 8, 7};
+        LogUtils.d(TAG, "start");
+        LogUtils.d(TAG, new AssignCookies01().findContentChildren(children, cookies));
+    }
 }

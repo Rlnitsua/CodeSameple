@@ -1,9 +1,8 @@
 package lizbyu.hash;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ProductoftheLastKNumbersTest {
     @Test
@@ -14,7 +13,8 @@ public class ProductoftheLastKNumbersTest {
         productOfNumbers.add(2);        // [3,0,2]
         productOfNumbers.add(5);        // [3,0,2,5]
         productOfNumbers.add(4);        // [3,0,2,5,4]
-        assertEquals(productOfNumbers.getProduct(2), 20);; // return 20. The product of the last 2 numbers is 5 * 4 = 20
+        assertEquals(productOfNumbers.getProduct(2), 20);
+        ; // return 20. The product of the last 2 numbers is 5 * 4 = 20
         assertEquals(productOfNumbers.getProduct(3), 40); // return 40. The product of the last 3 numbers is 2 * 5 * 4 = 40
         assertEquals(productOfNumbers.getProduct(4), 0); // return 0. The product of the last 4 numbers is 0 * 2 * 5 * 4 = 0
         productOfNumbers.add(8);        // [3,0,2,5,4,8]

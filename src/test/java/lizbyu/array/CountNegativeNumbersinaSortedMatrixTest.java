@@ -4,11 +4,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CountNegativeNumbersinaSortedMatrixTest {
@@ -23,10 +22,10 @@ public class CountNegativeNumbersinaSortedMatrixTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[][]{new int[]{4,3,2,-1}, new int[]{3,2,1,-1},
-                        new int[]{1,1,-1,-2}, new int[]{-1,-1,-2,-3}}, 8},
-                {new int[][]{new int[]{3,2}, new int[]{1,0}}, 0},
-                {new int[][]{new int[]{1,-1}, new int[]{-1,-1}}, 3},
+                {new int[][]{new int[]{4, 3, 2, -1}, new int[]{3, 2, 1, -1},
+                        new int[]{1, 1, -1, -2}, new int[]{-1, -1, -2, -3}}, 8},
+                {new int[][]{new int[]{3, 2}, new int[]{1, 0}}, 0},
+                {new int[][]{new int[]{1, -1}, new int[]{-1, -1}}, 3},
                 {new int[][]{new int[]{-1}}, 1},
         });
     }

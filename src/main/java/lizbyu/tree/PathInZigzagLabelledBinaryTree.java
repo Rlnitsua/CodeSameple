@@ -26,7 +26,7 @@ public class PathInZigzagLabelledBinaryTree {
         if (level == 0) {
             return;
         }
-        if (level %2 != 0) {
+        if (level % 2 != 0) {
             int other = (int) (Math.pow(2, level) + Math.pow(2, level + 1) - 1 - label);
             addPath(getParent(other), res, level - 1);
         } else {
@@ -36,7 +36,7 @@ public class PathInZigzagLabelledBinaryTree {
     }
 
     private int getParent(int label) {
-        if (label %2 == 0) {
+        if (label % 2 == 0) {
             return label / 2;
         } else {
             return (label - 1) / 2;

@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CountGoodTripletsTest {
@@ -28,8 +28,8 @@ public class CountGoodTripletsTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{3,0,1,1,9,7}, 7, 2, 3, 4},
-                {new int[]{1,1,2,2,3}, 0, 0, 1, 0},
+                {new int[]{3, 0, 1, 1, 9, 7}, 7, 2, 3, 4},
+                {new int[]{1, 1, 2, 2, 3}, 0, 0, 1, 0},
         });
     }
 

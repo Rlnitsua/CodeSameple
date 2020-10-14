@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class MaximumProfitofOperatingaCentennialWheelTest {
@@ -26,10 +26,10 @@ public class MaximumProfitofOperatingaCentennialWheelTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{8,3}, 5, 6, 3},
-                {new int[]{10,9,6}, 6, 4, 7},
-                {new int[]{3,4,0,5,1}, 1, 92, -1},
-                {new int[]{10,10,6,4,7}, 3, 8, 9},
+                {new int[]{8, 3}, 5, 6, 3},
+                {new int[]{10, 9, 6}, 6, 4, 7},
+                {new int[]{3, 4, 0, 5, 1}, 1, 92, -1},
+                {new int[]{10, 10, 6, 4, 7}, 3, 8, 9},
         });
     }
 

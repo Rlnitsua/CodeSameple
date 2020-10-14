@@ -1,7 +1,5 @@
 package lizbyu.array;
 
-import lizbyu.string.LengthofLastWord;
-
 public class ReplaceElementswithGreatestElementonRightSide {
     public int[] replaceElements(int[] arr) {
         int[] res = new int[arr.length];

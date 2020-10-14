@@ -4,11 +4,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
 public class HowManyNumbersAreSmallerThantheCurrentNumberTest {
@@ -22,10 +20,10 @@ public class HowManyNumbersAreSmallerThantheCurrentNumberTest {
 
     @Parameterized.Parameters
     public static Iterable<Object[]> preparedData() {
-        return Arrays.asList(new Object[][] {
-                {new int[]{8,1,2,2,3}, new int[]{4,0,1,1,3}},
-                {new int[]{6,5,4,8}, new int[]{2,1,0,3}},
-                {new int[]{7,7,7,7}, new int[]{0,0,0,0}}
+        return Arrays.asList(new Object[][]{
+                {new int[]{8, 1, 2, 2, 3}, new int[]{4, 0, 1, 1, 3}},
+                {new int[]{6, 5, 4, 8}, new int[]{2, 1, 0, 3}},
+                {new int[]{7, 7, 7, 7}, new int[]{0, 0, 0, 0}}
         });
     }
 

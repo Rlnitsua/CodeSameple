@@ -11,7 +11,7 @@ public class MinimumCosttoConnectSticks {
             pq.add(s);
         }
 
-        while(pq.size() > 1) {
+        while (pq.size() > 1) {
             int sum = pq.poll() + pq.poll();
             res += sum;
             pq.add(sum);

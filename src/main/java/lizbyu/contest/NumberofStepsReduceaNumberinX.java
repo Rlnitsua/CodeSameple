@@ -6,7 +6,7 @@ public class NumberofStepsReduceaNumberinX {
     public int numSteps(String s) {
         int time = 0;
 
-        while(s.length() != 1) {
+        while (s.length() != 1) {
             char[] chArr = s.toCharArray();
             if (chArr[chArr.length - 1] == '1') {
                 int index = -1;

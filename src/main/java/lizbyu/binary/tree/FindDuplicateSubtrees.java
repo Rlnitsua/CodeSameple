@@ -1,11 +1,11 @@
 package lizbyu.binary.tree;
 
-import java.util.List;
-
 import lizbyu.utils.node.TreeNode;
 
+import java.util.List;
+
 public class FindDuplicateSubtrees {
-	public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-		return null;
-	}
+    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+        return null;
+    }
 }

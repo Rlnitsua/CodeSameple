@@ -1,12 +1,12 @@
 package lizbyu.utils.node;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class TreeNodes {
-    private TreeNodes(){}
+    private TreeNodes() {
+    }
 
-    public static TreeNode create(List<Integer> valueList){
+    public static TreeNode create(List<Integer> valueList) {
         return createRootNode(valueList, 0);
     }
 

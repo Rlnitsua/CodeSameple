@@ -4,6 +4,7 @@ import lizbyu.utils.log.LogUtils;
 import lizbyu.utils.node.TreeNode;
 import lizbyu.utils.node.TreeNodes;
 import org.junit.Test;
+
 import java.util.Arrays;
 
 public class FlattenBinaryTreetoLinkedListTest {

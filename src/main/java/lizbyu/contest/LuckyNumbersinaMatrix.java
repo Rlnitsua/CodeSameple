@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class LuckyNumbersinaMatrix {
-    public List<Integer> luckyNumbers (int[][] matrix) {
+    public List<Integer> luckyNumbers(int[][] matrix) {
         List<Integer> res = new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
 
@@ -35,7 +35,7 @@ public class LuckyNumbersinaMatrix {
             }
         }
 
-        return  res;
+        return res;
     }
 
     private int calculateMaxVal(int[][] matrix, int minValColumnIndex) {

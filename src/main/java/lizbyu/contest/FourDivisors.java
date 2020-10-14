@@ -14,7 +14,7 @@ public class FourDivisors {
             if (cache.containsKey(num)) {
                 divisors = cache.get(num);
             } else {
-                if(preJdugeFourDivisors(cache, num)) {
+                if (preJdugeFourDivisors(cache, num)) {
                     divisors = getDivisors(num);
                 } else {
                     continue;
@@ -31,7 +31,7 @@ public class FourDivisors {
         return res;
     }
 
-    private boolean preJdugeFourDivisors(Map<Integer,int[]> cache, Integer num) {
+    private boolean preJdugeFourDivisors(Map<Integer, int[]> cache, Integer num) {
         for (Integer cacheItem : cache.keySet()) {
             if (num > cacheItem && num % cacheItem == 0) {
                 return false;

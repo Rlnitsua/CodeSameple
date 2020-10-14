@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FourDivisorsTest {
@@ -22,8 +22,8 @@ public class FourDivisorsTest {
     @Parameterized.Parameters
     public static Collection<Object[]> prepareData() {
         return Arrays.asList(new Object[][]{
-                {new int[]{21,4,7}, 32},
-                {new int[]{7286,18704,70773,8224,91675}, 10932}
+                {new int[]{21, 4, 7}, 32},
+                {new int[]{7286, 18704, 70773, 8224, 91675}, 10932}
         });
     }
 

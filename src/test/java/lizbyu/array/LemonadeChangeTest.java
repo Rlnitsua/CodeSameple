@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class LemonadeChangeTest {
@@ -22,10 +22,10 @@ public class LemonadeChangeTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{5,5,5,10,20}, true},
-                {new int[]{5,5,10}, true},
-                {new int[]{10,10}, false},
-                {new int[]{5,5,10,10,20}, false},
+                {new int[]{5, 5, 5, 10, 20}, true},
+                {new int[]{5, 5, 10}, true},
+                {new int[]{10, 10}, false},
+                {new int[]{5, 5, 10, 10, 20}, false},
         });
     }
 

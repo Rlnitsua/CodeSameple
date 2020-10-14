@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class LongestContinuousSubarrayWithAbsoluteDiffLessThanorEqualtoLimitTest {
@@ -24,9 +24,9 @@ public class LongestContinuousSubarrayWithAbsoluteDiffLessThanorEqualtoLimitTest
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{8,2,4,7}, 4, 2},
-                {new int[]{10,1,2,4,7,2}, 5, 4},
-                {new int[]{4,2,2,2,4,4,2,2}, 0, 3},
+                {new int[]{8, 2, 4, 7}, 4, 2},
+                {new int[]{10, 1, 2, 4, 7, 2}, 5, 4},
+                {new int[]{4, 2, 2, 2, 4, 4, 2, 2}, 0, 3},
         });
     }
 

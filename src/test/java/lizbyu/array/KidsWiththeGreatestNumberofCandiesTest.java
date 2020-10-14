@@ -6,10 +6,9 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class KidsWiththeGreatestNumberofCandiesTest {
@@ -26,8 +25,8 @@ public class KidsWiththeGreatestNumberofCandiesTest {
     @Parameterized.Parameters
     public static Collection<Object[]> prepareData() {
         return Arrays.asList(new Object[][]{
-                {new int[]{2,3,5,1,3}, 3, Arrays.asList(true, true, true, false, true)},
-                {new int[]{4,2,1,1,2}, 1, Arrays.asList(true, false, false, false, false)},
+                {new int[]{2, 3, 5, 1, 3}, 3, Arrays.asList(true, true, true, false, true)},
+                {new int[]{4, 2, 1, 1, 2}, 1, Arrays.asList(true, false, false, false, false)},
                 {new int[]{12, 1, 12}, 10, Arrays.asList(true, false, true)},
         });
     }

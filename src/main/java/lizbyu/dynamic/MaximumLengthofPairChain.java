@@ -18,61 +18,61 @@ The number of given pairs will be in the range [1, 1000].
 */
 
 public class MaximumLengthofPairChain {
-	public int findLongestChain(int[][] pairs) {
-		doSort(pairs);
-		
-		int res = 0;
-		
-		int currentLeft = pairs[0][0];
-		while(isPairExist(currentLeft, pairs)) {
-			int leftNum = getCurrentPair(currentLeft, pairs)[0];
-			int rightNum = getCurrentPair(currentLeft, pairs)[1];
-			int findGapNum = findGapNum(leftNum, rightNum, pairs);
-			
-			if (findGapNum > 1) {
-				res += findGapNum;
-			} else {
-				res += 1;
-			}
-			
-			currentLeft = rightNum;
-		}
-		
-		return res;
-	}
-	
-	private void doSort(int[][] pairs) {
-		
-	}
+    public int findLongestChain(int[][] pairs) {
+        doSort(pairs);
 
-	private boolean isPairExist(int startNum, int[][] pairs) {
-		return getCurrentPair(startNum, pairs) != null;
-	}
-	
-	private int[] getCurrentPair(int startNum, int[][] pairs) {
-		for (int i = 0; i < pairs.length; i++) {
-			if (pairs[i][0] == startNum) {
-				return pairs[i];
-			}
-		}
-		return null;
-	}
+        int res = 0;
 
-	private int findGapNum(int i, int j, int[][] pairs) {
-		int num = 0;
-		for (int index = 0; i < pairs.length; i++) {
-			if (pairs[0][index] == i && pairs[1][index] == j) {
-				continue;
-			}
-			
-			if (pairs[0][index] <= i && pairs[1][index] >= j) {
-				num++;
-			}
-			
-			if (pairs[0][index] > i) {
-				break;
-			}
-		}
-		return num;
-	}
+        int currentLeft = pairs[0][0];
+        while (isPairExist(currentLeft, pairs)) {
+            int leftNum = getCurrentPair(currentLeft, pairs)[0];
+            int rightNum = getCurrentPair(currentLeft, pairs)[1];
+            int findGapNum = findGapNum(leftNum, rightNum, pairs);
+
+            if (findGapNum > 1) {
+                res += findGapNum;
+            } else {
+                res += 1;
+            }
+
+            currentLeft = rightNum;
+        }
+
+        return res;
+    }
+
+    private void doSort(int[][] pairs) {
+
+    }
+
+    private boolean isPairExist(int startNum, int[][] pairs) {
+        return getCurrentPair(startNum, pairs) != null;
+    }
+
+    private int[] getCurrentPair(int startNum, int[][] pairs) {
+        for (int i = 0; i < pairs.length; i++) {
+            if (pairs[i][0] == startNum) {
+                return pairs[i];
+            }
+        }
+        return null;
+    }
+
+    private int findGapNum(int i, int j, int[][] pairs) {
+        int num = 0;
+        for (int index = 0; i < pairs.length; i++) {
+            if (pairs[0][index] == i && pairs[1][index] == j) {
+                continue;
+            }
+
+            if (pairs[0][index] <= i && pairs[1][index] >= j) {
+                num++;
+            }
+
+            if (pairs[0][index] > i) {
+                break;
+            }
+        }
+        return num;
+    }
 }

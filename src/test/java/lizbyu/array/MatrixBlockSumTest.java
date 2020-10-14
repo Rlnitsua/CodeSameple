@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
 public class MatrixBlockSumTest {
@@ -24,10 +24,10 @@ public class MatrixBlockSumTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[][]{new int[]{1,2,3}, new int[]{4,5,6}, new int[]{7,8,9}}, 1,
-                        new int[][]{new int[]{12,21,16}, new int[]{27,45,33}, new int[]{24,39,28}}},
-                {new int[][]{new int[]{1,2,3}, new int[]{4,5,6}, new int[]{7,8,9}}, 2,
-                        new int[][]{new int[]{45, 45, 45},new int[]{45, 45, 45},new int[]{45, 45, 45}}},
+                {new int[][]{new int[]{1, 2, 3}, new int[]{4, 5, 6}, new int[]{7, 8, 9}}, 1,
+                        new int[][]{new int[]{12, 21, 16}, new int[]{27, 45, 33}, new int[]{24, 39, 28}}},
+                {new int[][]{new int[]{1, 2, 3}, new int[]{4, 5, 6}, new int[]{7, 8, 9}}, 2,
+                        new int[][]{new int[]{45, 45, 45}, new int[]{45, 45, 45}, new int[]{45, 45, 45}}},
         });
     }
 

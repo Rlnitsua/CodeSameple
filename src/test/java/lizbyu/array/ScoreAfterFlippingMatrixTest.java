@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class ScoreAfterFlippingMatrixTest {
@@ -22,7 +22,7 @@ public class ScoreAfterFlippingMatrixTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[][]{new int[]{0,0,1,1}, new int[]{1,0,1,0}, new int[]{1,1,0,0}}, 39}
+                {new int[][]{new int[]{0, 0, 1, 1}, new int[]{1, 0, 1, 0}, new int[]{1, 1, 0, 0}}, 39}
         });
     }
 

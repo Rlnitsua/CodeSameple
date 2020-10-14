@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CrawlerLogFolderTest {
@@ -22,9 +22,9 @@ public class CrawlerLogFolderTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new String[]{"d1/","d2/","../","d21/","./"}, 2},
-                {new String[]{"d1/","d2/","./","d3/","../","d31/"}, 3},
-                {new String[]{"d1/","../","../","../"}, 0},
+                {new String[]{"d1/", "d2/", "../", "d21/", "./"}, 2},
+                {new String[]{"d1/", "d2/", "./", "d3/", "../", "d31/"}, 3},
+                {new String[]{"d1/", "../", "../", "../"}, 0},
         });
     }
 

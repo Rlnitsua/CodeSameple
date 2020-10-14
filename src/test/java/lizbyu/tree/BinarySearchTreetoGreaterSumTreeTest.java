@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 public class BinarySearchTreetoGreaterSumTreeTest {
@@ -24,8 +24,8 @@ public class BinarySearchTreetoGreaterSumTreeTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {TreeNodes.create(Arrays.asList(4,1,6,0,2,5,7,null,null,null,3,null,null,null,8)),
-                 TreeNodes.create(Arrays.asList(30,36,21,36,35,26,15,null,null,null,33,null,null,null,8))},
+                {TreeNodes.create(Arrays.asList(4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8)),
+                        TreeNodes.create(Arrays.asList(30, 36, 21, 36, 35, 26, 15, null, null, null, 33, null, null, null, 8))},
         });
     }
 

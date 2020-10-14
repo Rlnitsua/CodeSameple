@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
 public class ReplaceElementswithGreatestElementonRightSideTest {
@@ -22,7 +22,7 @@ public class ReplaceElementswithGreatestElementonRightSideTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{17,18,5,4,6,1}, new int[]{18,6,6,6,1,-1}},
+                {new int[]{17, 18, 5, 4, 6, 1}, new int[]{18, 6, 6, 6, 1, -1}},
         });
     }
 

@@ -36,7 +36,7 @@ public class Triangle {
     }
 
     private double triAngleArea(POINT A, POINT B, POINT C) {
-        POINT ab,bc;
+        POINT ab, bc;
         ab = new POINT(B.x - A.x, B.y - A.y);//
         bc = new POINT(C.x - B.x, C.y - B.y);
         return Math.abs((ab.x * bc.y - ab.y * bc.x) / 2.0);

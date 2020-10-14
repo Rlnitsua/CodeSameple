@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class ArrayofDoubledPairsTest {
@@ -22,10 +22,10 @@ public class ArrayofDoubledPairsTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{3,1,3,6}, false},
-                {new int[]{2,1,2,6}, false},
-                {new int[]{4,-2,2,-4}, true},
-                {new int[]{1,2,4,16,8,4}, false},
+                {new int[]{3, 1, 3, 6}, false},
+                {new int[]{2, 1, 2, 6}, false},
+                {new int[]{4, -2, 2, -4}, true},
+                {new int[]{1, 2, 4, 16, 8, 4}, false},
         });
     }
 

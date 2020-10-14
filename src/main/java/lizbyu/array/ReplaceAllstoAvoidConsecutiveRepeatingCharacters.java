@@ -51,7 +51,7 @@ public class ReplaceAllstoAvoidConsecutiveRepeatingCharacters {
             }
 
             if (!contains) {
-                return (char)target;
+                return (char) target;
             }
         }
     }

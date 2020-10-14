@@ -10,10 +10,10 @@ public class NumberofWaysWhereSquareofNumberIsEqualtoProductofTwoNumbers {
         int res = 0;
 
         for (int value : nums1) {
-            res += info2.getOrDefault((long)value * value, 0);
+            res += info2.getOrDefault((long) value * value, 0);
         }
         for (int value : nums2) {
-            res += info1.getOrDefault((long)value * value, 0);
+            res += info1.getOrDefault((long) value * value, 0);
         }
 
         return res;
@@ -23,7 +23,7 @@ public class NumberofWaysWhereSquareofNumberIsEqualtoProductofTwoNumbers {
         Map<Long, Integer> info = new HashMap<>();
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
-                Long res = (long) nums[i] * (long)nums[j];
+                Long res = (long) nums[i] * (long) nums[j];
                 if (info.containsKey(res)) {
                     info.put(res, info.get(res) + 1);
                 } else {

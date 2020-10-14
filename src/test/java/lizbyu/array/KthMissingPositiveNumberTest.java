@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class KthMissingPositiveNumberTest {
@@ -24,8 +24,8 @@ public class KthMissingPositiveNumberTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{2,3,4,7,11}, 5, 9},
-                {new int[]{1,2,3,4}, 2, 6},
+                {new int[]{2, 3, 4, 7, 11}, 5, 9},
+                {new int[]{1, 2, 3, 4}, 2, 6},
         });
     }
 

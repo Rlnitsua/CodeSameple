@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class RectangleOverlapTest {
@@ -24,8 +24,8 @@ public class RectangleOverlapTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{0,0,2,2}, new int[]{1,1,3,3}, true},
-                {new int[]{0,0,1,1}, new int[]{1,0,2,1}, false},
+                {new int[]{0, 0, 2, 2}, new int[]{1, 1, 3, 3}, true},
+                {new int[]{0, 0, 1, 1}, new int[]{1, 0, 2, 1}, false},
         });
     }
 

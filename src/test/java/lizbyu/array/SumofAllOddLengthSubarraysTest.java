@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class SumofAllOddLengthSubarraysTest {
@@ -22,9 +22,9 @@ public class SumofAllOddLengthSubarraysTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{1,4,2,5,3}, 58},
-                {new int[]{1,2}, 3},
-                {new int[]{10,11,12}, 66},
+                {new int[]{1, 4, 2, 5, 3}, 58},
+                {new int[]{1, 2}, 3},
+                {new int[]{10, 11, 12}, 66},
         });
     }
 

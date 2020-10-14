@@ -4,13 +4,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class MostVisitedSectorinaCircularTrackTest {
@@ -28,8 +27,8 @@ public class MostVisitedSectorinaCircularTrackTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {4, new int[]{1, 3, 1, 2}, Arrays.asList(1, 2)},
-                {2, new int[]{2,1,2,1,2,1,2,1,2}, Collections.singletonList(2)},
-                {7, new int[]{1,3,5,7}, Arrays.asList(1,2,3,4,5,6,7)},
+                {2, new int[]{2, 1, 2, 1, 2, 1, 2, 1, 2}, Collections.singletonList(2)},
+                {7, new int[]{1, 3, 5, 7}, Arrays.asList(1, 2, 3, 4, 5, 6, 7)},
         });
     }
 
