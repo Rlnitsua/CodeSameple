@@ -16,12 +16,7 @@ public class TopKFrequentElements {
         }
 
         List<Entry<Integer, Integer>> entryList = new ArrayList<>(map.entrySet());
-        Collections.sort(entryList, new Comparator<Entry<Integer, Integer>>() {
-            @Override
-            public int compare(Entry<Integer, Integer> o1, Entry<Integer, Integer> o2) {
-                return o2.getValue() - o1.getValue();
-            }
-        });
+        entryList.sort((o1, o2) -> o2.getValue() - o1.getValue());
 
         List<Integer> res = new ArrayList<>();
         for (Entry<Integer, Integer> resEntry : entryList) {

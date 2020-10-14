@@ -29,9 +29,9 @@ public class ReshapetheMatrix {
 
     private Queue<Integer> getNumQueue(int[][] nums) {
         Queue<Integer> numQueue = new LinkedBlockingQueue<>();
-        for (int row = 0; row < nums.length; row++) {
+        for (int[] num : nums) {
             for (int column = 0; column < nums[0].length; column++) {
-                numQueue.offer(nums[row][column]);
+                numQueue.offer(num[column]);
             }
         }
         return numQueue;
@@ -40,7 +40,9 @@ public class ReshapetheMatrix {
     private void doCopy(int[][] res, Queue<Integer> numQueue) {
         for (int row = 0; row < res.length; row++) {
             for (int column = 0; column < res[0].length; column++) {
-                res[row][column] = numQueue.poll();
+                if (!numQueue.isEmpty()) {
+                    res[row][column] = numQueue.poll();
+                }
             }
         }
     }

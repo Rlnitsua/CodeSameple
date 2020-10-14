@@ -20,7 +20,7 @@ public class SearchInsertPosition {
     }
 
     private int search(int[] nums, int target, int low, int high) {
-        int mid = 0;
+        int mid;
 
         while (low < high) {
             mid = (low + high) >> 1;

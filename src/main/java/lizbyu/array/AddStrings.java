@@ -15,10 +15,10 @@ public class AddStrings {
 
     // use stack to reverse integer
     private Stack<Integer> getStack(String num) {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         char[] numArray = num.toCharArray();
         for (char numCh : numArray) {
-            stack.push(Integer.valueOf(numCh) - 48);
+            stack.push((int) numCh - 48);
         }
         return stack;
     }
@@ -26,7 +26,7 @@ public class AddStrings {
     private String addBigInteger(Stack<Integer> stack1, Stack<Integer> stack2) {
         StringBuffer sb = new StringBuffer();
         boolean isCarryBit = false;
-        int maxSize = stack1.size() > stack2.size() ? stack1.size() : stack2.size();
+        int maxSize = Math.max(stack1.size(), stack2.size());
 
         // set StringBuffer value
         for (int i = 0; i < maxSize; i++) {

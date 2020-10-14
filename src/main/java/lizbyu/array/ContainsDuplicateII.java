@@ -16,11 +16,11 @@ public class ContainsDuplicateII {
             return false;
         }
 
-        Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+        Map<Integer, List<Integer>> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             if (!map.containsKey(nums[i])) {
-                List<Integer> list = new ArrayList<Integer>();
+                List<Integer> list = new ArrayList<>();
                 list.add(i);
                 map.put(nums[i], list);
             } else {

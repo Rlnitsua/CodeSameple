@@ -15,7 +15,7 @@ public class KdiffPairsinanArray {
         }
 
         Arrays.sort(nums);
-        List<Integer> resList = new ArrayList<Integer>();
+        List<Integer> resList = new ArrayList<>();
 
         for (int i = 0; i < nums.length - 1; i++) {
             if (resList.contains(nums[i])) {
