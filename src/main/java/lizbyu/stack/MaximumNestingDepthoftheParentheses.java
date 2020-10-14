@@ -1,4 +1,4 @@
-package lizbyu.dsa.stack;
+package lizbyu.stack;
 
 public class MaximumNestingDepthoftheParentheses {
     public int maxDepth(String s) {

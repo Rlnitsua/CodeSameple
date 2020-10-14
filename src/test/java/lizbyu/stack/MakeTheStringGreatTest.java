@@ -1,4 +1,4 @@
-package lizbyu.dsa.stack;
+package lizbyu.stack;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

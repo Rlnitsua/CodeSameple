@@ -1,4 +1,4 @@
-package lizbyu.dsa.stack;
+package lizbyu.stack;
 
 import java.util.ArrayList;
 import java.util.Collections;
