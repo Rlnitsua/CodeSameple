@@ -20,7 +20,7 @@ public class MaximumSwap {
         char[] numChArr = String.valueOf(num).toCharArray();
         int[] numArr = new int[numChArr.length];
         for (int i = 0; i < numChArr.length; i++) {
-            numArr[i] = Integer.valueOf(numChArr[i] + "");
+            numArr[i] = Integer.parseInt(numChArr[i] + "");
         }
         return numArr;
     }
@@ -38,11 +38,9 @@ public class MaximumSwap {
         int max = numArr[i];
         int maxIndex = i;
         for (int j = i; j < numArr.length; j++) {
-            if (numArr[j] > numArr[i]) {
-                if (numArr[j] >= max) {
-                    max = numArr[j];
-                    maxIndex = j;
-                }
+            if (numArr[j] > numArr[i] && numArr[j] >= max) {
+                max = numArr[j];
+                maxIndex = j;
             }
         }
 
@@ -54,11 +52,11 @@ public class MaximumSwap {
         numArr[i] = numArr[maxIndex];
         numArr[maxIndex] = temp;
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int num : numArr) {
-            sb.append(String.valueOf(num));
+            sb.append(num);
         }
-        return Integer.valueOf(new String(sb));
+        return Integer.parseInt(new String(sb));
     }
 
     public static void main(String[] args) {
