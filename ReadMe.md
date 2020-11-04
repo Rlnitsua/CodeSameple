@@ -1,3 +1,1 @@
-#### LeetCode
-------
 * Some Code samples.
