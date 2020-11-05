@@ -2,7 +2,7 @@ package rlnitsua.list;
 
 import rlnitsua.utils.log.LogUtils;
 import rlnitsua.utils.node.ListNode;
-import rlnitsua.utils.node.ListNodeCreater;
+import rlnitsua.utils.node.ListNodes;
 
 public class PlusOneLinkedList {
     private static final String TAG = "PlusOneLinkedList";
@@ -41,7 +41,7 @@ public class PlusOneLinkedList {
 
     public static void main(String[] args) {
         PlusOneLinkedList plusOneLinkedList = new PlusOneLinkedList();
-        ListNode head = ListNodeCreater.create("1, 2, 3");
+        ListNode head = ListNodes.create("1, 2, 3");
         LogUtils.d(TAG, plusOneLinkedList.plusOne(head));
     }
 }

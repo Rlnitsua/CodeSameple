@@ -2,7 +2,7 @@ package rlnitsua.list;
 
 import rlnitsua.utils.log.LogUtils;
 import rlnitsua.utils.node.ListNode;
-import rlnitsua.utils.node.ListNodeCreater;
+import rlnitsua.utils.node.ListNodes;
 
 import java.util.Stack;
 
@@ -46,8 +46,8 @@ public class AddTwoNumbersII {
     }
 
     public static void main(String[] args) {
-        ListNode l1 = ListNodeCreater.create("7,2,4,3");
-        ListNode l2 = ListNodeCreater.create("5,6,4");
+        ListNode l1 = ListNodes.create("7,2,4,3");
+        ListNode l2 = ListNodes.create("5,6,4");
 
         AddTwoNumbersII addTwoNumbersII = new AddTwoNumbersII();
         LogUtils.d(TAG, addTwoNumbersII.addTwoNumbers(l1, l2));

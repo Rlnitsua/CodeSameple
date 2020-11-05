@@ -2,7 +2,7 @@ package rlnitsua.list;
 
 import rlnitsua.utils.log.LogUtils;
 import rlnitsua.utils.node.ListNode;
-import rlnitsua.utils.node.ListNodeCreater;
+import rlnitsua.utils.node.ListNodes;
 
 public class IntersectionofTwoLinkedLists {
     private static final String TAG = "IntersectionofTwoLinkedLists";
@@ -59,7 +59,7 @@ public class IntersectionofTwoLinkedLists {
 //		ListNode headA = ListNodeCreater.create("1,2,3,4,5,6,7,8,9,10,11,12,13");
 //		ListNode headB = headA;
 
-        ListNode intersectionNode = ListNodeCreater.create("6,7,8,9,10");
+        ListNode intersectionNode = ListNodes.create("6,7,8,9,10");
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(3);
         ListNode node3 = new ListNode(5);
