@@ -1,31 +1,24 @@
 package rlnitsua.list;
 
-import rlnitsua.utils.log.LogUtils;
 import rlnitsua.utils.node.ListNode;
 
 public class LinkedListCycle {
-    private static final String TAG = "LinkedListCycle";
-
     public boolean hasCycle(ListNode head) {
         if (head == null) {
             return false;
         }
 
-        ListNode slower = head;
-        ListNode faster = head;
+        ListNode slow = head;
+        ListNode fast = head;
 
-        while (faster.next != null && faster.next.next != null) {
-            slower = slower.next;
-            faster = faster.next.next;
-            if (slower == faster) {
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
                 return true;
             }
         }
-        return false;
-    }
 
-    public static void main(String[] args) {
-        LogUtils.d(TAG, "start");
-        LogUtils.d(TAG, new LinkedListCycle().hasCycle(null));
+        return false;
     }
 }
