@@ -1,47 +1,27 @@
 package rlnitsua.stack;
 
-import rlnitsua.utils.log.LogUtils;
 
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class ValidParentheses {
-    private static final String TAG = "ValidParentheses";
 
     public boolean isValid(String s) {
-        if (s == null || s.length() == 0) {
-            return true;
-        }
-
-        Stack<Character> stack = new Stack<Character>();
+        Deque<Character> stack = new LinkedList<>();
 
         for (char ch : s.toCharArray()) {
-            if (ch == '(' || ch == ')' || ch == '[' || ch == ']' ||
-                    ch == '{' || ch == '}') {
-                if (stack.size() == 0 || !isMathching(ch, stack.peek())) {
-                    stack.push(ch);
-                } else {
-                    stack.pop();
-                }
+            if (ch == '(') {
+                stack.push(')');
+            } else if (ch == '[') {
+                stack.push(']');
+            } else if (ch == '{') {
+                stack.push('}');
+            } else if (stack.isEmpty() || stack.pop() != ch) {
+                return false;
             }
         }
 
-        return stack.size() == 0;
+        return stack.isEmpty();
     }
 
-    private boolean isMathching(char ch, char topE) {
-        if (ch == ')') {
-            return topE == '(';
-        } else if (ch == ']') {
-            return topE == '[';
-        } else if (ch == '}') {
-            return topE == '{';
-        } else {
-            return false;
-        }
-    }
-
-    public static void main(String[] args) {
-        LogUtils.d(TAG, "start");
-        LogUtils.d(TAG, new ValidParentheses().isValid("()"));
-    }
 }
