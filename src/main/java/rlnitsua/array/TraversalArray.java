@@ -5,7 +5,7 @@ public class TraversalArray {
 
     public int[] printMatrix (int[][] matrix) {
         if (matrix.length == 0) {
-            return null;
+            return new int[0];
         }
 
         int[] res = new int[matrix.length * matrix[0].length];
