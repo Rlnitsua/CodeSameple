@@ -1,49 +1,38 @@
 package rlnitsua.stack;
 
-import rlnitsua.utils.log.LogUtils;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class MinStack {
-    private static final String TAG = "MinStack";
-    List<Integer> numStack;
-    List<Integer> minNumStack;
+    private final Deque<Integer> stack;
+    private final Deque<Integer> cacheMinStack;
 
-    /**
-     * initialize your data structure here.
-     */
     public MinStack() {
-        numStack = new ArrayList<Integer>();
-        minNumStack = new ArrayList<Integer>();
+        stack = new LinkedList<>();
+        cacheMinStack = new LinkedList<>();
     }
 
     public void push(int x) {
-        numStack.add(x);
-        minNumStack.add(x);
-        Collections.sort(minNumStack);
+        stack.push(x);
+        if (cacheMinStack.isEmpty()) {
+            cacheMinStack.push(x);
+        } else {
+            cacheMinStack.push(cacheMinStack.peek() < x ? cacheMinStack.peek() : x);
+        }
     }
 
     public void pop() {
-        Integer num = numStack.get(numStack.size() - 1);
-        numStack.remove(numStack.size() - 1);
-        minNumStack.remove(Integer.valueOf(num));
+        stack.pop();
+        cacheMinStack.pop();
     }
 
     public int top() {
-        return numStack.get(numStack.size() - 1);
+        assert !stack.isEmpty();
+        return stack.peek();
     }
 
     public int getMin() {
-        return minNumStack.get(0);
-    }
-
-    public static void main(String[] args) {
-        MinStack obj = new MinStack();
-        obj.push(2);
-        obj.pop();
-        LogUtils.d(TAG, obj.top());
-        LogUtils.d(TAG, obj.getMin());
+        assert !cacheMinStack.isEmpty();
+        return cacheMinStack.peek();
     }
 }
