@@ -1,32 +1,23 @@
 package rlnitsua.math;
 
-import rlnitsua.utils.log.LogUtils;
-
 public class ReverseInteger {
-    private static final String TAG = "ReverseInteger";
 
     public int reverse(int x) {
-        boolean isNegtive = x < 0 ? true : false;
+        int res = 0;
 
-        StringBuffer res = new StringBuffer();
-        x = Math.abs(x);
-
-        while (x > 0) {
-            res.append(x % 10);
+        while (x != 0) {
+            int last = x % 10;
             x /= 10;
+            if (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && last > 7)) {
+                return 0;
+            } else if (res < Integer.MIN_VALUE / 10 || (res == Integer.MIN_VALUE / 10 && last < -8)) {
+                return 0;
+            } else {
+                res = res * 10 + last;
+            }
         }
 
-        try {
-            int resInt = Integer.valueOf(new String(res));
-            return isNegtive ? resInt * (-1) : resInt;
-        } catch (Exception e) {
-            return 0;
-        }
+        return res;
     }
 
-    public static void main(String[] args) {
-        LogUtils.d(TAG, new ReverseInteger().reverse(123));
-        LogUtils.d(TAG, new ReverseInteger().reverse(-123));
-        LogUtils.d(TAG, new ReverseInteger().reverse(1247489999));
-    }
 }
