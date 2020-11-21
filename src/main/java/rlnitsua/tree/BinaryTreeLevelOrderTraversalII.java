@@ -1,49 +1,40 @@
 package rlnitsua.tree;
 
-import rlnitsua.utils.log.LogUtils;
+
 import rlnitsua.utils.node.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTreeLevelOrderTraversalII {
-    private static final String TAG = "BinaryTreeLevelOrderTraversalII";
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> res = new LinkedList<>();
         if (root == null) {
-            return null;
-        }
-        LinkedList<List<Integer>> valList = new LinkedList<List<Integer>>();
-        addValList(valList, root, 0);
-        return valList;
-    }
-
-    private void addValList(LinkedList<List<Integer>> valList, TreeNode root, int deep) {
-        if (root == null) {
-            return;
-        }
-        if (deep >= valList.size()) {
-            valList.addFirst(new LinkedList<Integer>());
+            return res;
         }
 
-        addValList(valList, root.left, deep + 1);
-        addValList(valList, root.right, deep + 1);
-        valList.get(valList.size() - 1 - deep).add(root.val);
-    }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
 
-    public static void main(String[] args) {
-        TreeNode node1 = new TreeNode(3);
-        TreeNode node2 = new TreeNode(9);
-        TreeNode node3 = new TreeNode(20);
-        TreeNode node4 = new TreeNode(15);
-        TreeNode node5 = new TreeNode(7);
+        while (!queue.isEmpty()) {
+            List<Integer> list = new LinkedList<>();
+            int size = queue.size();
 
-        node1.left = node2;
-        node1.right = node3;
-        node3.left = node4;
-        node3.right = node5;
-
-        LogUtils.d(TAG, "start");
-        LogUtils.d(TAG, new BinaryTreeLevelOrderTraversalII().levelOrderBottom(node1));
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                assert node != null;
+                list.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            res.add(0, list);
+        }
+        return res;
     }
 }
