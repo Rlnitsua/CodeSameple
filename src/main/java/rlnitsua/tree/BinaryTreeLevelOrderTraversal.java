@@ -1,86 +1,39 @@
 package rlnitsua.tree;
 
-import rlnitsua.utils.log.LogUtils;
 import rlnitsua.utils.node.TreeNode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTreeLevelOrderTraversal {
-    private static final String TAG = "BinaryTreeLevelOrderTraversal";
-
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> levelList = new ArrayList<List<Integer>>();
-        insertLevelList(levelList, root, 0);
-        return levelList;
-    }
+        List<List<Integer>> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
 
-    private void insertLevelList(List<List<Integer>> levelList, TreeNode root,
-                                 int deep) {
-        if (root != null) {
-            List<Integer> integerList;
-            if (deep >= levelList.size()) {
-                integerList = new ArrayList<Integer>();
-                integerList.add(root.val);
-                levelList.add(integerList);
-            } else {
-                levelList.get(deep).add(root.val);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            List<Integer> l = new ArrayList<>();
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                assert node != null;
+                l.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
             }
-
-            insertLevelList(levelList, root.left, deep + 1);
-            insertLevelList(levelList, root.right, deep + 1);
-        }
-    }
-
-    public static void main(String[] args) {
-/*		TreeNode n1 = new TreeNode(3);
-		TreeNode n2 = new TreeNode(9);
-		TreeNode n3 = new TreeNode(20);
-		TreeNode n4 = new TreeNode(15);
-		TreeNode n5 = new TreeNode(7);
-
-		n1.left = n2;
-		n1.right = n3;
-		n3.left = n4;
-		n3.right = n5;*/
-
-        TreeNode n1 = new TreeNode(1);
-        TreeNode n2 = new TreeNode(2);
-        TreeNode n3 = new TreeNode(3);
-        TreeNode n4 = new TreeNode(4);
-        TreeNode n5 = new TreeNode(5);
-
-        n1.left = n2;
-        n1.right = n3;
-        n2.left = n4;
-        n2.right = n5;
-
-        LogUtils.d(TAG, "start");
-        LogUtils.d(TAG, new BinaryTreeLevelOrderTraversal().levelOrder(n1));
-    }
-
-    public static class BinaryTreeTilt {
-        public int findTilt(TreeNode root) {
-            if (root == null) {
-                return 0;
-            }
-
-            return calculateTilt(root) + findTilt(root.left) + findTilt(root.right);
+            list.add(l);
         }
 
-        private int calculateTilt(TreeNode root) {
-            return Math.abs(calculateSum(root.left) - calculateSum(root.right));
-        }
-
-        private int calculateSum(TreeNode root) {
-            if (root == null) {
-                return 0;
-            }
-
-            int sum = root.val;
-            sum += calculateSum(root.left);
-            sum += calculateSum(root.right);
-            return sum;
-        }
+        return list;
     }
 }
