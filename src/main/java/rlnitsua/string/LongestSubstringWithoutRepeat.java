@@ -1,29 +1,24 @@
 package rlnitsua.string;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LongestSubstringWithoutRepeat {
     public int lengthOfLongestSubstring(String s) {
-        Set<Character> set = new HashSet<>();
-        int slow = 0;
-        int fast = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        int left = 0;
+        int right = 0;
         int longest = 0;
 
-        while (slow < s.length()) {
-            if (fast == s.length()) {
-                break;
-            }
+        while (right < s.length()) {
+            char rightCh = s.charAt(right++);
+            map.put(rightCh, map.getOrDefault(rightCh, 0) + 1);
 
-            char target = s.charAt(fast);
-            if (!set.contains(target)) {
-                fast++;
-                set.add(target);
-                longest = Math.max(longest, set.size());
-            } else {
-                set.remove(s.charAt(slow));
-                slow++;
+            while (map.get(rightCh) > 1) {
+                char leftCh = s.charAt(left++);
+                map.put(leftCh, map.get(leftCh) - 1);
             }
+            longest = Math.max(longest, right - left);
         }
 
         return longest;
