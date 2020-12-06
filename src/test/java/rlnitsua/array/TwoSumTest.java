@@ -24,7 +24,7 @@ public class TwoSumTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{3, 2, 4}, 6, new int[]{1, 2}},
+                {new int[]{3, 2, 4}, 6, new int[]{2, 4}},
         });
     }
 

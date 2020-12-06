@@ -1,11 +1,14 @@
 package rlnitsua.array;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
     public int[] twoSum (int[] numbers, int target) {
+        if (numbers == null || numbers.length == 0) {
+            return new int[0];
+        }
+
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
             if (map.containsKey(target - numbers[i])) {
@@ -13,6 +16,6 @@ public class TwoSum {
             }
             map.put(numbers[i], i);
         }
-        throw new IllegalArgumentException("error numbers input !");
+        return new int[0];
     }
 }
